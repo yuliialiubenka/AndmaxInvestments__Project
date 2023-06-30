@@ -1,0 +1,67 @@
+<svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
+  <defs>
+    <!-- Arrow to right -->
+    <symbol id="to-right-arrow" viewBox="0 0 59 8">
+          <path d="M58.354 4.354a.5.5 0 0 0 0-.708L55.172.464a.5.5 0 1 0-.707.708L57.293 4l-2.828 2.828a.5.5 0 1 0 .707.708l3.182-3.182ZM0 4.5h58v-1H0v1Z" fill="#000"/>
+    </symbol>
+    <!-- Menu -->
+    <symbol id="menu" viewBox="0 0 24 24">
+        <path d="M2 5.995c0-.55.446-.995.995-.995h8.01a.995.995 0 1 1 0 1.99h-8.01A.995.995 0 0 1 2 5.995ZM2 12c0-.55.446-.995.995-.995h18.01a.995.995 0 1 1 0 1.99H2.995A.995.995 0 0 1 2 12Zm.995 5.01a.995.995 0 1 0 0 1.99h12.01a.995.995 0 1 0 0-1.99H2.995Z"/>
+    </symbol>
+    <!-- Close-dark -->
+    <symbol id="close-dark" viewBox="0 0 24 24">
+        <path d="M18 6 6 18M6 6l12 12" stroke="#AE1332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Close-light -->
+    <symbol id="close-light" viewBox="0 0 24 24">
+        <path d="M18 6 6 18M6 6l12 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!--Phone-->
+    <symbol id="phone" viewBox="0 0 24 24">
+        <path d="M16.75 18.75c-7.25 0-11.5-4.25-11.5-11.5a1 1 0 0 1 1-1h3c.276 0 .5.224.517.5.051.799.215 1.818.493 2.523.106.27.027.6-.225.743l-1.285.734c0 2.25 2.25 4.5 4.75 4.5l.513-1.197c.123-.288.483-.4.776-.29.701.264 1.685.42 2.462.47.275.017.499.24.499.517v3a1 1 0 0 1-1 1Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!--Shapes-->
+    <symbol id="shapes" viewBox="0 0 27 27" fill="none">
+        <path d="M12.375 8.375h.844a5.406 5.406 0 0 1 5.406 5.406v5.344A5.127 5.127 0 0 1 13.5 24.25H7.875a5.127 5.127 0 0 1-5.125-5.125V13.5a5.127 5.127 0 0 1 5.125-5.125h4.5Z" stroke="#fff"/>
+        <path d="M12.982 7.375a5.684 5.684 0 1 1 6.643 6.643v-.237a6.405 6.405 0 0 0-6.406-6.406h-.236Z" stroke="#fff"/>
+    </symbol>
+    <!-- Arrow next -->
+    <symbol id="arrow-next" viewBox="0 0 19 16" fill="none">
+        <path d="M18.707 8.707a1 1 0 0 0 0-1.414L12.343.929a1 1 0 1 0-1.414 1.414L16.586 8l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364ZM0 9h18V7H0v2Z" fill="#000"/>
+    </symbol>
+    <!-- Arrow prev -->
+    <symbol id="arrow-prev" viewBox="0 0 19 16" fill="none">
+        <path d="M.293 7.293a1 1 0 0 0 0 1.414l6.364 6.364a1 1 0 0 0 1.414-1.414L2.414 8l5.657-5.657A1 1 0 0 0 6.657.93L.293 7.293ZM19 7H1v2h18V7Z" fill="#fff"/>
+    </symbol>
+    <!-- Home black -->
+    <symbol id="home" viewBox="0 0 25 25" fill="none">
+        <path d="M9.396 2.958 3.78 7.333c-.938.73-1.698 2.282-1.698 3.459v7.719c0 2.416 1.969 4.395 4.385 4.395H18.53a4.399 4.399 0 0 0 4.385-4.385v-7.583c0-1.26-.843-2.875-1.875-3.594l-6.437-4.51c-1.458-1.021-3.802-.97-5.208.124Z" fill="#fff" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12.5 18.74v-3.125 3.124Z" fill="#fff"/>
+        <path d="M12.5 18.74v-3.125" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Home gray -->
+    <symbol id="home-gray" viewBox="0 0 25 25" fill="none">
+        <path d="M9.396 2.958 3.78 7.333c-.938.73-1.698 2.282-1.698 3.459v7.719c0 2.416 1.969 4.395 4.385 4.395H18.53a4.399 4.399 0 0 0 4.385-4.385v-7.583c0-1.26-.843-2.875-1.875-3.594l-6.437-4.51c-1.458-1.021-3.802-.97-5.208.124Z" fill="#fff" stroke="#B3B6BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12.5 18.74v-3.125 3.124Z" fill="#fff"/>
+        <path d="M12.5 18.74v-3.125" stroke="#B3B6BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!--Phone footer-->
+    <symbol id="phone-footer" viewBox="0 0 28 28" fill="none">
+          <path d="M19.542 21.875c-8.459 0-13.417-4.958-13.417-13.416 0-.645.522-1.167 1.167-1.167h3.583c.276 0 .5.224.515.5.055.974.26 2.261.614 3.109.111.267.033.596-.219.74l-1.577.901c0 2.625 2.625 5.25 5.542 5.25l.638-1.49c.123-.287.482-.397.772-.28.847.338 2.097.535 3.049.588.276.016.5.24.5.515v3.584c0 .644-.523 1.166-1.167 1.166Z" fill="#000" stroke="#160042" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!--Email footer-->
+    <symbol id="email-footer" viewBox="0 0 28 28" fill="none">
+        <g stroke="#FBFBFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6.125 18.255v-8.51a1.87 1.87 0 0 1 1.87-1.87h12.01a1.87 1.87 0 0 1 1.87 1.87v8.51a1.87 1.87 0 0 1-1.87 1.87H7.995a1.87 1.87 0 0 1-1.87-1.87Z" fill="#000"/>
+            <path d="m7 8.75 5.844 4.14a2 2 0 0 0 2.312 0L21 8.75"/>
+        </g>
+    </symbol>
+    <!--Clock footer-->
+    <symbol id="clock-footer" viewBox="0 0 28 28" fill="none">
+        <g stroke="#010E16" stroke-width=".5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.036 11.636c0 5.94-7.636 11.03-7.636 11.03s-7.636-5.09-7.636-11.03a7.636 7.636 0 1 1 15.272 0Z" fill="#010E16"/>
+            <path d="M13.4 14.182a2.545 2.545 0 1 0 0-5.091 2.545 2.545 0 0 0 0 5.09Z" fill="#fff"/>
+        </g>
+    </symbol>
+  </defs>
+</svg>

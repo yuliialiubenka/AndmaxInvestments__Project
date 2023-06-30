@@ -2,84 +2,1636 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/andmax-investments/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Andmax Investments</title>
     
-    <script type="module" crossorigin src="/vanilla-app-template/assets/index-c45ada6b.js"></script>
-    <link rel="stylesheet" href="/vanilla-app-template/assets/index-10c40100.css">
+    <script type="module" crossorigin src="/andmax-investments/assets/index-fd1bf525.js"></script>
+    <link rel="stylesheet" href="/andmax-investments/assets/index-6e4cdb73.css">
   </head>
   <body>
     <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-  </nav>
+    <div class="container header-container flex --just-space">
+        <nav class="header__navigation flex">
+            <a class="header__logo" href="./index.html">
+                <img src="/andmax-investments/assets/logo-575f6923.svg" alt="Logo">
+            </a>
+            <ul class="header__menu flex">
+                <li class="header__menu-item"><a class="header__menu-item-link active" href="#">Кипр</a></li>
+                <li class="header__menu-item"><a class="header__menu-item-link" href="#">Комплексы</a></li>
+                <li class="header__menu-item"><a class="header__menu-item-link" href="#">Апартаменты</a></li>
+                <li class="header__menu-item"><a class="header__menu-item-link" href="#">Инвесторам</a></li>
+                <li class="header__menu-item"><a class="header__menu-item-link" href="#">О нас</a></li>
+                <li class="header__menu-item"><a class="header__menu-item-link" href="#">Контакты</a></li>
+                <li class="header__menu-item nav-item dropdown">
+                    <a class="header__menu-item-link nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Меню
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Кипр</a></li>
+                      <li><a class="dropdown-item" href="#">Комплексы</a></li>
+                      <li><a class="dropdown-item" href="#">Апартаменты</a></li>
+                      <li><a class="dropdown-item" href="#">Инвесторам</a></li>
+                      <li><a class="dropdown-item" href="#">О нас</a></li>
+                      <li class="header__menu-item"><a class="dropdown-item header__menu-item-link" href="#">Контакты</a></li>
+                    </ul>
+                  </li>
+            </ul>
+        </nav>
+        <div class="header__right-block flex --align-center">
+            <address class="header__contacts">
+                <svg class="header__contacts-icon" width="24" height="24">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#phone"></use>
+                </svg>
+                <a href="tel:+905488394815">+905488394815</a>
+            </address>
+            <div class="header__lang">
+                <select class="header__lang-wrapper">
+                    <option value="ru">RU</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+            <button class="header__button" type="button">Получить предложения</button>
+        </div>
+    </div>
 </header>
 
-
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="/vanilla-app-template/assets/javascript-8dac5379.svg" alt="" />
+    <section class="section header__section">
+      <div class="container header__section-container flex --just-end">
+        <div class="header__section-circle-info flex --align-center --just-center">
+          <p>для жизни и инвестиций</p>
+          <div class="header__section-line"></div>
+        </div>
+        <div class="header__section-info">
+          <h2 class="header__section-price">от 80 000$</h2>
+          <h1 class="header__section-title">Апартаменты</h1>
+          <a class="header__section-link link" href="#">Посмотреть проекти</a>
+          <p class="header__section-desc">У берегов Северного Кипра с доходностью до 30% годовых</p>
+        </div>
+        <button class="header__section-btn" type="button">
+          <span>get an offer</span>
+          <p>Получить предложения</p>
+          <svg class="header__section-btn-icon" width="59" height="8">
+            <use href="/andmax-investments/assets/icons-79cfb5c3.svg#to-right-arrow"></use>
+          </svg>
+        </button>
+      </div>
     </section>
 
-    <!-- Loads the specified .html file -->
-    <section class="vite-promo">
-  <div class="container">
-    <div class="wrapper">
-      <h2 class="title">
-        <span class="gradient">Vite</span>
-      </h2>
-      <p class="text">Next Generation Frontend Tooling</p>
-      <p class="tagline">
-        Get ready for a development environment that can finally catch up with
-        you.
-      </p>
+    <section class="section price__section">
+      <div class="container price__section-container">
+        <ul class="price__section-cards flex">
+          <li class="price__section-card">
+            <span class="price__section-card-ellipce flex --align-center --just-center">
+              <svg class="price__section-card-icon" width="27" height="27">
+                <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+              </svg>
+            </span>
+            <h3 class="price__section-card-title">Цены от 80 000$</h3>
+            <p class="price__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
+          </li>
+          <li class="price__section-card">
+            <span class="price__section-card-ellipce flex --align-center --just-center">
+              <svg class="price__section-card-icon" width="27" height="27">
+                <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+              </svg>
+            </span>
+            <h3 class="price__section-card-title">Первый взнос от 35%</h3>
+            <p class="price__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
+          </li>
+          <li class="price__section-card">
+            <span class="price__section-card-ellipce flex --align-center --just-center">
+              <svg class="price__section-card-icon" width="27" height="27">
+                <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+              </svg>
+            </span>
+            <h3 class="price__section-card-title">Доход от аренды 8-30%</h3>
+            <p class="price__section-card-desc">Доход за продажу или сдачу в аренду недвижимости на Кипре в среднем составляет 30%</p>
+          </li>
+          <li class="price__section-card">
+            <span class="price__section-card-ellipce flex --align-center --just-center">
+              <svg class="price__section-card-icon" width="27" height="27">
+                <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+              </svg>
+            </span>
+            <h3 class="price__section-card-title">Беспроцентная рассрочка 5-7 лет</h3>
+            <p class="price__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
+          </li>
+        </ul>
+        <swiper-container class="mySwiper" space-between="40"
+          slides-per-view="2" loop="true" centered-slides="true">
+          <swiper-slide>
+            <div class="price__section-card">
+              <span class="price__section-card-ellipce flex --align-center --just-center">
+                <svg class="price__section-card-icon" width="27" height="27">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+                </svg>
+              </span>
+              <h3 class="price__section-card-title">Цены от 80 000$</h3>
+              <p class="price__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="price__section-card">
+              <span class="price__section-card-ellipce flex --align-center --just-center">
+                <svg class="price__section-card-icon" width="27" height="27">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+                </svg>
+              </span>
+              <h3 class="price__section-card-title">Первый взнос от 35%</h3>
+              <p class="price__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="price__section-card">
+              <span class="price__section-card-ellipce flex --align-center --just-center">
+                <svg class="price__section-card-icon" width="27" height="27">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+                </svg>
+              </span>
+              <h3 class="price__section-card-title">Доход от аренды 8-30%</h3>
+              <p class="price__section-card-desc">Доход за продажу или сдачу в аренду недвижимости на Кипре в среднем составляет 30%</p>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="price__section-card">
+              <span class="price__section-card-ellipce flex --align-center --just-center">
+                <svg class="price__section-card-icon" width="27" height="27">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+                </svg>
+              </span>
+              <h3 class="price__section-card-title">Беспроцентная рассрочка 5-7 лет</h3>
+              <p class="price__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
+            </div>
+          </swiper-slide>
+        </swiper-container> 
+      </div>
+    </section>
 
-      <ul class="actions">
-        <li class="action">
-          <a
-            class="link"
-            href="https://vitejs.dev/guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Get Started</a
-          >
-        </li>
-        <li class="action">
-          <a
-            class="link"
-            href="https://github.com/vitejs/vite"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View on GitHub</a
-          >
-        </li>
-      </ul>
+    <section class="section why-сyprus__section" >
+      <div class="container why-сyprus__section-container flex --just-space">
+        <div class="why-сyprus__section-wrapper">
+          <h2 class="why-сyprus__section-title">Почему Северный Кипр стал пользоваться</h2>
+          <h3 class="why-сyprus__section-subtitle">спросом у инвесторов</h3>
+          <div class="why-сyprus__section-card">
+            <span class="why-сyprus__section-card-ellipce flex --align-center --just-center">
+              <svg class="why-сyprus__section-card-icon" width="27" height="27">
+                <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+              </svg>
+            </span>
+            <p class="why-сyprus__section-card-desc flex">На Кипре более 300 дней в году приходится на солнечные ясные дни. Мягкий средиземноморский климат делает эту страну идеальным местом для жизни.</p>
+          </div>
+        </div>
+        <!-- <div class="carousel-buttons flex --dir-col --just-end">
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <svg class="carousel-control-icon-next" width="19" height="16">
+              <use href="./img/icons.svg#arrow-next"></use>
+            </svg>
+          </a>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-cc73c9b8e1862f7e">
+            <svg class="carousel-control-icon-prev" width="19" height="16">
+              <use href="./img/icons.svg#arrow-prev"></use>
+            </svg>
+          </a>
+        </div> -->
+        <swiper-container class="mySwiper img-swiper" navigation="true" space-between="80"
+        slides-per-view="2" loop="true">
+          <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/cyprus-f057decb.png"></swiper-slide>
+          <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/cyprus-f057decb.png"></swiper-slide>
+          <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/cyprus-f057decb.png"></swiper-slide>
+          <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/cyprus-f057decb.png"></swiper-slide>
+        </swiper-container> 
+      </div>
+    </section>
+
+    <section class="section advantages__section">
+      <div class="container advantages__section-container flex">
+        <div class="advantages__section-img" style="background-image: url(/andmax-investments/assets/advantages-section-img-53a1be48.jpg);"></div>
+        <div class="advantages__section-wrapper flex --dir-col">
+          <div id="carouselExampleControls2" class="carousel slide" data-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <ul class="advantages__section-cards flex --dir-col">
+                  <li class="advantages__section-card flex --align-center">
+                    <span class="advantages__section-card-ellipce flex --align-center --just-center">
+                      <svg class="advantages__section-card-icon" width="25" height="25">
+                        <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home"></use>
+                      </svg>
+                    </span>
+                    <p class="advantages__section-card-text">Вероятность признания через 2-4 года по уставу ООН ( а следовательно поднятия цены в 2-3 раза относительно Южного Кипра)</p>
+                  </li>
+                  <li class="advantages__section-card flex --align-center">
+                    <span class="advantages__section-card-ellipce flex --align-center --just-center">
+                      <svg class="advantages__section-card-icon" width="25" height="25">
+                        <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home"></use>
+                      </svg>
+                    </span>
+                    <p class="advantages__section-card-text">Не требуются подтверждения происхождения $ при покупке недвижимости</p>
+                  </li>
+                  <li class="advantages__section-card flex --align-center">
+                    <span class="advantages__section-card-ellipce flex --align-center --just-center">
+                      <svg class="advantages__section-card-icon" width="25" height="25">
+                        <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home"></use>
+                      </svg>
+                    </span>
+                    <p class="advantages__section-card-text">Дешевые коммунальные услуги</p>
+                  </li>
+                  <li class="advantages__section-card flex --align-center">
+                    <span class="advantages__section-card-ellipce flex --align-center --just-center">
+                      <svg class="advantages__section-card-icon" width="25" height="25">
+                        <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home"></use>
+                      </svg>
+                    </span>
+                    <p class="advantages__section-card-text">Отсутствие на острове преступности</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="carousel-item">
+                <ul class="advantages__section-cards flex --dir-col">
+                  <li class="advantages__section-card flex --align-center">
+                    <span class="advantages__section-card-ellipce flex --align-center --just-center">
+                      <svg class="carousel-control-icon-next" width="25" height="25">
+                        <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home"></use>
+                      </svg>
+                    </span>
+                    <p class="advantages__section-card-text">Вероятность признания через 2-4 года по уставу ООН ( а следовательно поднятия цены в 2-3 раза относительно Южного Кипра)</p>
+                  </li>
+                  <li class="advantages__section-card flex --align-center">
+                    <span class="advantages__section-card-ellipce flex --align-center --just-center">
+                      <svg class="carousel-control-icon-next" width="25" height="25">
+                        <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home"></use>
+                      </svg>
+                    </span>
+                    <p class="advantages__section-card-text">Не требуются подтверждения происхождения $ при покупке недвижимости</p>
+                  </li>
+                  <li class="advantages__section-card flex --align-center">
+                    <span class="advantages__section-card-ellipce flex --align-center --just-center">
+                      <svg class="carousel-control-icon-next" width="25" height="25">
+                        <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home"></use>
+                      </svg>
+                    </span>
+                    <p class="advantages__section-card-text">Дешевые коммунальные услуги</p>
+                  </li>
+                  <li class="advantages__section-card flex --align-center">
+                    <span class="advantages__section-card-ellipce flex --align-center --just-center">
+                      <svg class="carousel-control-icon-next" width="25" height="25">
+                        <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home"></use>
+                      </svg>
+                    </span>
+                    <p class="advantages__section-card-text">Отсутствие на острове преступности</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="carousel-item">
+                <ul class="advantages__section-cards flex --dir-col">
+                  <li class="advantages__section-card flex --align-center">
+                    <span class="advantages__section-card-ellipce flex --align-center --just-center">
+                      <svg class="carousel-control-icon-next" width="25" height="25">
+                        <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home"></use>
+                      </svg>
+                    </span>
+                    <p class="advantages__section-card-text">Вероятность признания через 2-4 года по уставу ООН ( а следовательно поднятия цены в 2-3 раза относительно Южного Кипра)</p>
+                  </li>
+                  <li class="advantages__section-card flex --align-center">
+                    <span class="advantages__section-card-ellipce flex --align-center --just-center">
+                      <svg class="carousel-control-icon-next" width="25" height="25">
+                        <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home"></use>
+                      </svg>
+                    </span>
+                    <p class="advantages__section-card-text">Не требуются подтверждения происхождения $ при покупке недвижимости</p>
+                  </li>
+                  <li class="advantages__section-card flex --align-center">
+                    <span class="advantages__section-card-ellipce flex --align-center --just-center">
+                      <svg class="carousel-control-icon-next" width="25" height="25">
+                        <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home"></use>
+                      </svg>
+                    </span>
+                    <p class="advantages__section-card-text">Дешевые коммунальные услуги</p>
+                  </li>
+                  <li class="advantages__section-card flex --align-center">
+                    <span class="advantages__section-card-ellipce flex --align-center --just-center">
+                      <svg class="carousel-control-icon-next" width="25" height="25">
+                        <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home"></use>
+                      </svg>
+                    </span>
+                    <p class="advantages__section-card-text">Отсутствие на острове преступности</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-buttons flex --just-end">
+            <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+              <svg class="carousel-control-icon-next" width="19" height="16">
+                <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-next"></use>
+              </svg>
+            </a>
+            <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+              <svg class="carousel-control-icon-prev" width="19" height="16">
+                <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-prev"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="advantages__section-wrap flex --align-center">
+            <button class="advantages__section-btn get-offer-btn" type="button">Получить предложения</button>
+            <a class="advantages__section-link link" href="#">Посмотреть проекти</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section restaurant__section">
+      <div class="container restaurant__section-container">
+        <h2 class="restaurant__section-title">Ресторан на територии комплекса</h2>
+        <p class="restaurant__section-desc">Наш проект сочетает в себе лучшие условия для комфортного проживания и абсолютно самодостаточную инфраструктуру. На территории комплекса сосредоточено огромное количество живых растений, бассейны, спорт площадки, зоны для отдыха.</p>
+        <div class="restaurant__section-wrapper flex --just-space">
+          <ul class="restaurant__section-cards flex --dir-col">
+            <li class="restaurant__section-card">
+              <span class="restaurant__section-card-ellipce flex --align-center --just-center">
+                <svg class="restaurant__section-card-icon" width="27" height="27">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+                </svg>
+              </span>
+              <h4 class="restaurant__section-card-title">Кухня</h4>
+              <p class="restaurant__section-card-desc">Вкуснейшая Европейская кухня не оставит равнодушным!</p>
+            </li>
+            <li class="restaurant__section-card">
+              <span class="restaurant__section-card-ellipce flex --align-center --just-center">
+                <svg class="restaurant__section-card-icon" width="27" height="27">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+                </svg>
+              </span>
+              <h4 class="restaurant__section-card-title">Оплата</h4>
+              <p class="restaurant__section-card-desc">Наличный расчет: доллар, евро, турецкая лира, а также безналичный расчет.</p>
+            </li>
+            <li class="restaurant__section-card">
+              <span class="restaurant__section-card-ellipce flex --align-center --just-center">
+                <svg class="restaurant__section-card-icon" width="27" height="27">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+                </svg>
+              </span>
+              <h4 class="restaurant__section-card-title">Широкий выбор Вин</h4>
+              <p class="restaurant__section-card-desc">Широкий ассортимент мировых способных удивить даже самых изысканных гурманов.</p>
+            </li>
+          </ul>
+          <!-- <div class="carousel-buttons flex --dir-col --just-end">
+            <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
+              <svg class="carousel-control-icon-next" width="19" height="16">
+                <use href="./img/icons.svg#arrow-next"></use>
+              </svg>
+            </a>
+            <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
+              <svg class="carousel-control-icon-prev" width="19" height="16">
+                <use href="./img/icons.svg#arrow-prev"></use>
+              </svg>
+            </a>
+          </div>
+          <div id="carouselExampleControls3" class="img-carousel carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="carousel-item-img" src="./img/restaurant.jpg" alt="First slide" width="443">
+              </div>
+              <div class="carousel-item">
+                <img class="carousel-item-img" src="./img/restaurant.jpg" alt="Second slide" width="443">
+              </div>
+              <div class="carousel-item">
+                <img class="carousel-item-img" src="./img/restaurant.jpg" alt="Third slide" width="443">
+              </div>
+            </div>
+          </div> -->
+          <swiper-container class="mySwiper img-swiper" navigation="true" space-between="80"
+          slides-per-view="2" loop="true">
+            <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/restaurant-54f06124.jpg"></swiper-slide>
+            <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/restaurant-54f06124.jpg"></swiper-slide>
+            <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/restaurant-54f06124.jpg"></swiper-slide>
+            <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/restaurant-54f06124.jpg"></swiper-slide>
+          </swiper-container> 
+        </div>
+      </div>
+    </section>
+
+    <section class="section coast__section">
+      <div class="container coast__section-container">
+        <h2 class="coast__section-title">Комплексы у берегов Средиземного Моря</h2>
+        <p class="coast__section-desc">Наш проект сочетает в себе лучшие условия для комфортного проживания и абсолютно самодостаточную инфраструктуру. На территории комплекса сосредоточено огромное количество живых растений, бассейны, спорт площадки, зоны для отдыха.</p>
+        <div class="coast__section-wrapper flex --just-space">
+          <ul class="coast__section-cards flex --dir-col">
+            <li class="coast__section-card">
+              <span class="coast__section-card-ellipce flex --align-center --just-center">
+                <svg class="coast__section-card-icon" width="27" height="27">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+                </svg>
+              </span>
+              <p class="coast__section-card-desc">Близость к морю от 100 до 500 метров</p>
+            </li>
+            <li class="coast__section-card">
+              <span class="coast__section-card-ellipce flex --align-center --just-center">
+                <svg class="coast__section-card-icon" width="27" height="27">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+                </svg>
+              </span>
+              <p class="coast__section-card-desc">Инфраструктура комплексов, которое включает все необходимое для комфортной жизни и отдыха</p>
+            </li>
+            <li class="coast__section-card">
+              <span class="coast__section-card-ellipce flex --align-center --just-center">
+                <svg class="coast__section-card-icon" width="27" height="27">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+                </svg>
+              </span>
+              <p class="coast__section-card-desc">Наличие управляющих и обслуживающих компаний в каждом комплексе (послепродажное обслуживание)</p>
+            </li>
+            <li class="coast__section-card">
+              <span class="coast__section-card-ellipce flex --align-center --just-center">
+                <svg class="coast__section-card-icon" width="27" height="27">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+                </svg>
+              </span>
+              <p class="coast__section-card-desc">Качественные строительные материалы</p>
+            </li>
+          </ul>
+          <!-- <div class="carousel-buttons flex --dir-col --just-end">
+            <a class="carousel-control-next" href="#carouselExampleControls4" role="button" data-slide="next">
+              <svg class="carousel-control-icon-next" width="19" height="16">
+                <use href="./img/icons.svg#arrow-next"></use>
+              </svg>
+            </a>
+            <a class="carousel-control-prev" href="#carouselExampleControls4" role="button" data-slide="prev">
+              <svg class="carousel-control-icon-prev" width="19" height="16">
+                <use href="./img/icons.svg#arrow-prev"></use>
+              </svg>
+            </a>
+          </div> -->
+          <swiper-container class="mySwiper img-swiper" navigation="true" space-between="80" slides-per-view="2" loop="true">
+            <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/restaurant-54f06124.jpg"></swiper-slide>
+            <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/restaurant-54f06124.jpg"></swiper-slide>
+            <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/restaurant-54f06124.jpg"></swiper-slide>
+            <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/restaurant-54f06124.jpg"></swiper-slide>
+          </swiper-container> 
+          <!-- <div id="carouselExampleControls4" class="img-carousel carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="carousel-item-img" src="./img/restaurant.jpg" alt="First slide" width="438">
+              </div>
+              <div class="carousel-item">
+                <img class="carousel-item-img" src="./img/restaurant.jpg" alt="Second slide" width="438">
+              </div>
+              <div class="carousel-item">
+                <img class="carousel-item-img" src="./img/restaurant.jpg" alt="Third slide" width="438">
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section spa-salon__section">
+      <div class="container spa-salon__section-container">
+        <h2 class="spa-salon__section-title">Spa-салон на территории Комплекса</h2>
+        <p class="spa-salon__section-desc">Наш проект сочетает в себе лучшие условия для комфортного проживания и абсолютно самодостаточную инфраструктуру.</p>
+        <div class="spa-salon__section-wrapper flex --just-space">
+          <ul class="spa-salon__section-cards flex --dir-col">
+            <li class="spa-salon__section-card">
+              <span class="spa-salon__section-card-ellipce flex --align-center --just-center">
+                <svg class="spa-salon__section-card-icon" width="25" height="25">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home-gray"></use>
+                </svg>
+              </span>
+              <h4 class="spa-salon__section-card-title">Масаж</h4>
+              <p class="restaurant__section-card-desc">Все виды массажа: тайский, спортивный, антицеллюлитный, лечебный массаж спины, баночный массаж.</p>
+            </li>
+            <li class="spa-salon__section-card">
+              <span class="spa-salon__section-card-ellipce flex --align-center --just-center">
+                <svg class="spa-salon__section-card-icon" width="25" height="25">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home-gray"></use>
+                </svg>
+              </span>
+              <h4 class="spa-salon__section-card-title">Обертывания</h4>
+              <p class="spa-salon__section-card-desc">Обертывания грязевые, водорослевые, жемчужные, шелковые, шоколадные</p>
+            </li>
+            <li class="spa-salon__section-card">
+              <span class="spa-salon__section-card-ellipce flex --align-center --just-center">
+                <svg class="spa-salon__section-card-icon" width="25" height="25">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#home-gray"></use>
+                </svg>
+              </span>
+              <h4 class="spa-salon__section-card-title">Сауна</h4>
+              <p class="spa-salon__section-card-desc">Поможет вам очистить ваш организм и омолодить вашу кожу и тело</p>
+            </li>
+          </ul>
+          <swiper-container class="mySwiper img-swiper" navigation="true" space-between="80"
+          slides-per-view="2" loop="true">
+            <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/cyprus-f057decb.png"></swiper-slide>
+            <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/cyprus-f057decb.png"></swiper-slide>
+            <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/cyprus-f057decb.png"></swiper-slide>
+            <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/cyprus-f057decb.png"></swiper-slide>
+          </swiper-container> 
+          <!-- <div class="carousel-buttons flex --dir-col --just-end">
+            <a class="carousel-control-next" href="#carouselExampleControls5" role="button" data-slide="next">
+              <svg class="carousel-control-icon-next" width="19" height="16">
+                <use href="./img/icons.svg#arrow-next"></use>
+              </svg>
+            </a>
+            <a class="carousel-control-prev" href="#carouselExampleControls5" role="button" data-slide="prev">
+              <svg class="carousel-control-icon-prev" width="19" height="16">
+                <use href="./img/icons.svg#arrow-prev"></use>
+              </svg>
+            </a>
+          </div>
+          <div id="carouselExampleControls5" class="img-carousel carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="carousel-item-img" src="./img/cyprus.png" alt="First slide" width="438">
+              </div>
+              <div class="carousel-item">
+                <img class="carousel-item-img" src="./img/cyprus.png" alt="Second slide" width="438">
+              </div>
+              <div class="carousel-item">
+                <img class="carousel-item-img" src="./img/cyprus.png" alt="Third slide" width="438">
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section video__section">
+      <video
+        poster="/andmax-investments/assets/video-preload-img-7e71c7a7.jpg"
+        width="100%"
+        autoplay=""
+        loop
+        preload="auto"
+        controls
+      >
+        <source src="https://media.istockphoto.com/id/1323709916/cs/video/baz%C3%A9n-shora-odraz-vodn%C3%AD-hladiny-za-slune%C4%8Dn%C3%A9ho-dne-loopable-l%C3%A9to-zpomalen%C3%BD-pohyb-%C5%BE%C3%ADrav%C3%AD.mp4?s=mp4-640x640-is&k=20&c=yZ8-2cQ2N6ap-2Veh5UMm3SzAitmtNi3YKKg6aw7n4A=">
+      </video>
+
+      <div class="container video__section-container">
+        <div class="video__section-info flex">
+          <h2 class="video__section-title">Песчаный Пляж 5-ти минутах от комплекса</h2>
+          <ul class="video__section-cards flex">
+            <li class="video__section-card">
+              <h4 class="video__section-card-title">Для семьи</h4>
+              <p class="video__section-card-desc">Мы рекомендуем для семей с маленькими детьми и тем, кто любит прекрасное побережье средиземного моря</p>
+            </li>
+            <li class="video__section-card">
+              <h4 class="video__section-card-title">Активный Отдых</h4>
+              <p class="video__section-card-desc">Волейбольная площадка, водные мотоциклы, пляжный футбол и прочие развлечения.</p>
+            </li>
+            <li class="video__section-card">
+              <h4 class="video__section-card-title">Бар - ресторан</h4>
+              <p class="video__section-card-desc">Бар возле пляжа для веселого время провождения с вашей семьей.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section locations__section">
+      <div class="container locations__section-container">
+        <h2 class="locations__section-title">Большой выбор локаций и недвижимости под ключ</h2>
+        <ul class="locations__section-cards flex">
+          <li class="locations__section-card">
+            <span class="locations__section-card-ellipce flex --align-center --just-center">
+              <svg class="locations__section-card-icon" width="27" height="27">
+                <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+              </svg>
+            </span>
+            <h3 class="locations__section-card-title">Цены от 80 000$</h3>
+            <p class="locations__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
+          </li>
+          <li class="locations__section-card">
+            <span class="locations__section-card-ellipce flex --align-center --just-center">
+              <svg class="locations__section-card-icon" width="27" height="27">
+                <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+              </svg>
+            </span>
+            <h3 class="locations__section-card-title">Первый взнос от 35%</h3>
+            <p class="locations__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
+          </li>
+          <li class="locations__section-card">
+            <span class="locations__section-card-ellipce flex --align-center --just-center">
+              <svg class="locations__section-card-icon" width="27" height="27">
+                <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+              </svg>
+            </span>
+            <h3 class="locations__section-card-title">Доход от аренды 8-30%</h3>
+            <p class="locations__section-card-desc">Доход за продажу или сдачу в аренду недвижимости на Кипре в среднем составляет 30%</p>
+          </li>
+          <li class="locations__section-card">
+            <span class="locations__section-card-ellipce flex --align-center --just-center">
+              <svg class="locations__section-card-icon" width="27" height="27">
+                <use href="/andmax-investments/assets/icons-79cfb5c3.svg#shapes"></use>
+              </svg>
+            </span>
+            <h3 class="locations__section-card-title">Беспроцентная рассрочка 5-7 лет</h3>
+            <p class="locations__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section property-type__section">
+      <div class="container property-type__section-container">
+        <h2 class="property-type__section-title">Тип недвижимости</h2> 
+        <div class="property-type__section-tabs">
+          <div class="property-type__section-tabs-wrapper flex --just-center">
+            <button type="button" class="property-type__section-tab tablink tab--active">Студия</button>
+            <button type="button" class="property-type__section-tab tablink">1+1</button>
+            <button type="button" class="property-type__section-tab tablink">2+1</button>
+            <button type="button" class="property-type__section-tab tablink">3+1</button>
+            <button type="button" class="property-type__section-tab tablink">Вилла</button>
+          </div>
+          <div class="property-type__section-tabs-content">
+            <div class="property-type__section-tab-item tabcontent content--active">
+              <div id="carouselExampleControls6" class="carousel slide" data-ride="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul >
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-buttons flex --just-end">
+                <a class="carousel-control-prev" href="#carouselExampleControls6" role="button" data-slide="prev">
+                  <svg class="carousel-control-icon-prev" width="19" height="16">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-prev"></use>
+                  </svg>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls6" role="button" data-slide="next">
+                  <svg class="carousel-control-icon-next" width="19" height="16">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-next"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="property-type__section-tab-item tabcontent">
+              <div id="carouselExampleControls7" class="carousel slide" data-ride="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-buttons flex --just-end">
+                <a class="carousel-control-prev" href="#carouselExampleControls7" role="button" data-slide="prev">
+                  <svg class="carousel-control-icon-prev" width="19" height="16">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-prev"></use>
+                  </svg>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls7" role="button" data-slide="next">
+                  <svg class="carousel-control-icon-next" width="19" height="16">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-next"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="property-type__section-tab-item tabcontent">
+              <div id="carouselExampleControls8" class="carousel slide" data-ride="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-buttons flex --just-end">
+                <a class="carousel-control-prev" href="#carouselExampleControls8" role="button" data-slide="prev">
+                  <svg class="carousel-control-icon-prev" width="19" height="16">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-prev"></use>
+                  </svg>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls8" role="button" data-slide="next">
+                  <svg class="carousel-control-icon-next" width="19" height="16">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-next"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="property-type__section-tab-item tabcontent">
+              <div id="carouselExampleControls9" class="carousel slide" data-ride="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-buttons flex --just-end">
+                <a class="carousel-control-prev" href="#carouselExampleControls9" role="button" data-slide="prev">
+                  <svg class="carousel-control-icon-prev" width="19" height="16">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-prev"></use>
+                  </svg>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls9" role="button" data-slide="next">
+                  <svg class="carousel-control-icon-next" width="19" height="16">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-next"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="property-type__section-tab-item tabcontent">
+              <div id="carouselExampleControls10" class="carousel slide" data-ride="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="property-type__section-card">
+                      <img class="property-type__section-img" src="/andmax-investments/assets/cyprus-f057decb.png" alt="">
+                      <div class="property-type__section-info">
+                        <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
+                        <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
+                        <p class="property-type__section-price">от<span>121 000$</span></p>
+                        <ul class="property-type__section-list-wrapper">
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Размер 60 - 69 кв. м.</li>
+                              <li><span></span>Отдельная спальня</li>
+                              <li><span></span>Меблированная кухня</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="property-type__section-list">
+                              <li><span></span>Кондиционер</li>
+                              <li><span></span>Два санузла</li>
+                              <li><span></span>Wi - Fi</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="property-type__section-wrap flex --align-center">
+                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-buttons flex --just-end">
+                <a class="carousel-control-prev" href="#carouselExampleControls10" role="button" data-slide="prev">
+                  <svg class="carousel-control-icon-prev" width="19" height="16">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-prev"></use>
+                  </svg>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls10" role="button" data-slide="next">
+                  <svg class="carousel-control-icon-next" width="19" height="16">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-next"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </section>
+
+    <section class="section form__section">
+      <div class="container form__section-container">
+        <h2 class="form__section-title">Не знаете какой объект выбрать?</h2>
+        <p class="form__section-desc">Свяжитесь с нами и получите весь каталог наших объектов</p>
+        <form action="" class="form__section-form flex --dir-col">
+          <strong class="form__section-form-title">Каталог недвижимости</strong>
+          <input
+          placeholder="Имя"
+          type="text"
+          name="user-name"
+          class="form__section-input"
+          id="user-name"
+			    minlength="2"
+          required
+          />
+          <input
+          placeholder="Номер телефона"
+          type="number"
+          name="user-phone"
+          class="form__section-input"
+          id="user-phone"
+			    minlength="2"
+          required
+          />
+          <button class="form__section-btn" type="submit">Получить</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section investment__section">
+      <div class="container investment__section-container flex">
+        <div class="investment__section-wrapper">
+          <h2 class="investment__section-title">Инвестируйте безопасно с профессионалами</h2>
+          <div id="carouselExampleControls11" class="carousel slide" data-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="investment__section-card">
+                  <p class="investment__section-card-text">Недвижимость на Северном Кипре обычно на 30–40% дешевле, чем в Португалии, и на 70% дешевле, чем в Италии и Франции.
+                  </p>
+                  <p class="investment__section-card-text">Капитал и доходность являются дополнительными преимуществами рынка доступной недвижимости, что делает этот регион идеальным инвестиционным пространством. Инвестиции в проекты закрытого сообщества</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="investment__section-card">
+                  <p class="investment__section-card-text">Недвижимость на Северном Кипре обычно на 30–40% дешевле, чем в Португалии, и на 70% дешевле, чем в Италии и Франции.
+                  </p>
+                  <p class="investment__section-card-text">Капитал и доходность являются дополнительными преимуществами рынка доступной недвижимости, что делает этот регион идеальным инвестиционным пространством. Инвестиции в проекты закрытого сообщества</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="investment__section-card">
+                  <p class="investment__section-card-text">Недвижимость на Северном Кипре обычно на 30–40% дешевле, чем в Португалии, и на 70% дешевле, чем в Италии и Франции.
+                  </p>
+                  <p class="investment__section-card-text">Капитал и доходность являются дополнительными преимуществами рынка доступной недвижимости, что делает этот регион идеальным инвестиционным пространством. Инвестиции в проекты закрытого сообщества</p>
+                </div>
+              </div>
+            </div>
+          </div>         
+          <div class="investment__section-bottom-wrap flex --align-center">
+            <span class="investment__section-text">участие в PRE-SALE (доход от 15%)</span>
+            <div class="carousel-buttons flex --just-end">
+              <a class="carousel-control-prev" href="#carouselExampleControls11" role="button" data-slide="prev">
+                <svg class="carousel-control-icon-prev" width="19" height="16">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-prev"></use>
+                </svg>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls11" role="button" data-slide="next">
+                <svg class="carousel-control-icon-next" width="19" height="16">
+                  <use href="/andmax-investments/assets/icons-79cfb5c3.svg#arrow-next"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="investment__section-wrapper">
+          <img class="investment__section-img" src="/andmax-investments/assets/investment-section-img-f1657654.jpg" alt="Investment">
+          <div class="investment__section-wrap flex --align-center">
+            <button class="investment__section-btn get-offer-btn" type="button">Получить предложения</button>
+            <a class="investment__section-link link" href="#">Нужна консультация</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-us__section">
+      <div class="container about-us__section-container">
+        <h2 class="about-us__section-title">ANDMAX INVESTMENTS</h2>
+        <p class="about-us__section-desc">ANDMAX investments основана в 2022 году. Компания ориентирована на инвестирование в недвижимость Северного Кипра. По мимо продажи для клиентов, наша компания предоставляет весь спектр услуг связанных с недвижимостью. До 2022 года наша команда тесно занималась инвестированием в недвижимость в других странах.</p>
+        <p class="about-us__section-desc">Также наша компания предоставляет юридические услуги в сфере недвижимости и защиту прав и интересов наших клиентов.</p>
+        <ul class="about-us__section-wrapper flex ">
+          <li class="about-us__section-card">
+            <h4 class="about-us__section-card-title">Экспертность</h4>
+            <p class="about-us__section-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet l</p>
+          </li>
+          <li class="about-us__section-card">
+            <h4 class="about-us__section-card-title">Прозрачные условия</h4>
+            <p class="about-us__section-card-desc">Полное сопровождение клиента на острове ( в случае покупки недвижимости, компенсируем билеты на самолет)</p>
+          </li>
+          <li class="about-us__section-card">
+            <h4 class="about-us__section-card-title">Репутация</h4>
+            <p class="about-us__section-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet l</p>
+          </li>
+          <li class="about-us__section-card">
+            <h4 class="about-us__section-card-title">Выгодно</h4>
+            <p class="about-us__section-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet l</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section our-team__section">
+      <div class="container our-team__section-container">
+        <h2 class="our-team__section-title">Наша команда</h2>
+        <ul class="our-team__section-cards flex">
+          <li class="our-team__section-card">
+            <img class="our-team__section-card-img" src="/andmax-investments/assets/Andrew-964b28f0.jpg" alt="Андрей">
+            <h4 class="our-team__section-card-name">Андрей</h4>
+            <h3 class="our-team__section-card-position">co-ceo</h3>
+          </li>
+          <li class="our-team__section-card">
+            <img class="our-team__section-card-img" src="/andmax-investments/assets/Oleg-b21fd070.jpg" alt="Олег">
+            <h4 class="our-team__section-card-name">Олег</h4>
+            <h3 class="our-team__section-card-position">co-ceo</h3>
+          </li>
+          <li class="our-team__section-card">
+            <img class="our-team__section-card-img" src="/andmax-investments/assets/Viktoria-e3f5d741.jpg" alt="Виктория">
+            <h4 class="our-team__section-card-name">Виктория</h4>
+            <h3 class="our-team__section-card-position">co-ceo</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section reviews__section">
+      <div class="container reviews__section-container">
+        <h2 class="reviews__section-title">Что говорят наши клиенты</h2>
+          <ul class="reviews__section-cards flex">
+            <li class="reviews__section-card">
+              <div class="reviews__section-card-info flex --align-center">
+                <img class="reviews__section-card-img" src="/andmax-investments/assets/client-photo-97ec1ce4.jpg" alt="Photo">
+                <div class="reviews__section-card-wrap">
+                  <h3 class="reviews__section-card-name">Анастасия</h3>
+                  <div class="reviews__section-card-stars">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+              </div>
+              <p class="reviews__section-card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              </p>
+            </li>
+            <li class="reviews__section-card">
+              <div class="reviews__section-card-info flex --align-center">
+                <img class="reviews__section-card-img" src="/andmax-investments/assets/client-photo-97ec1ce4.jpg" alt="Photo">
+                <div class="reviews__section-card-wrap">
+                  <h3 class="reviews__section-card-name">Анастасия</h3>
+                  <div class="reviews__section-card-stars">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+              </div>
+              <p class="reviews__section-card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              </p>
+            </li>
+            <li class="reviews__section-card">
+              <div class="reviews__section-card-info flex --align-center">
+                <img class="reviews__section-card-img" src="/andmax-investments/assets/client-photo-97ec1ce4.jpg" alt="Photo">
+                <div class="reviews__section-card-wrap">
+                  <h3 class="reviews__section-card-name">Анастасия</h3>
+                  <div class="reviews__section-card-stars">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+              </div>
+              <p class="reviews__section-card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              </p>
+            </li>
+          </ul>
+      </div>
+    </section>
+
+    <section class="section steps__section">
+      <div class="container steps__section-container">
+        <h2 class="steps__section-title">5 шагов к покупке недвижимости</h2>
+        <p class="steps__section-desc">Не откладывая на потом реализацию своей мечты</p>
+        <ul class="steps__section-cards flex">
+          <li class="steps__section-card flex">
+            <span class="steps__section-card-number">1</span>
+            <div class="steps__section-card-wrap">
+              <h4 class="steps__section-card-title">Обратитесь к специалисту</h4>
+              <p class="steps__section-card-desc">который поможет подобрать вам оптимальное решение</p>
+            </div>
+          </li>
+          <li class="steps__section-card flex">
+            <span class="steps__section-card-number">2</span>
+            <div class="steps__section-card-wrap">
+              <h4 class="steps__section-card-title">С помощью специалиста</h4>
+              <p class="steps__section-card-desc">подготовьте необходимый пакет документов</p>
+            </div>
+          </li>
+          <li class="steps__section-card flex">
+            <span class="steps__section-card-number">3</span>
+            <div class="steps__section-card-wrap">
+              <h4 class="steps__section-card-title">С помощью специалиста</h4>
+              <p class="steps__section-card-desc">подготовьте необходимый пакет документов</p>
+            </div>
+          </li>
+          <li class="steps__section-card flex">
+            <span class="steps__section-card-number">4</span>
+            <div class="steps__section-card-wrap">
+              <h4 class="steps__section-card-title">С помощью специалиста</h4>
+              <p class="steps__section-card-desc">подготовьте необходимый пакет документов</p>
+            </div>
+          </li>
+          <li class="steps__section-card flex">
+            <span class="steps__section-card-number">5</span>
+            <div class="steps__section-card-wrap">
+              <h4 class="steps__section-card-title">С помощью специалиста</h4>
+              <p class="steps__section-card-desc">подготовьте необходимый пакет документов</p>
+            </div>
+          </li>
+        </ul>
+        <div class="steps__section-wrap flex --align-center --just-center">
+          <button class="steps__section-btn get-offer-btn" type="button">Получить предложения</button>
+          <a class="steps__section-link link" href="#">Нужна консультация</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section island__section">
+      <div class="container island__section-container flex --just-space">
+        <div class="island__section-wrapper">
+          <h2 class="island__section-title">Предлагаем вам прилететь на остров!</h2>
+          <p class="island__section-desc">Наша компания готова поселить вас на 3 дня. Покажем все достопримечательности. Подберем для вас варианты коммерческой и жилой недвижимости!</p>
+          <div class="flex">
+            <form action="" class="island__section-form">
+              <strong class="island__section-form-title"></strong>
+              <input
+              placeholder="Имя"
+              type="text"
+              name="user-name"
+              class="island__section-input"
+              id="user-name"
+              minlength="2"
+              required
+              />
+              <input
+              placeholder="Номер телефона"
+              type="number"
+              name="user-phone"
+              class="island__section-input"
+              id="user-phone"
+              minlength="2"
+              required
+              />
+              <button class="island__section-btn" type="submit">Получить</button>
+            </form>
+            <!-- <div class="carousel-buttons flex --dir-col --just-end">
+              <a class="carousel-control-next" href="#carouselExampleControls12" role="button" data-slide="next">
+                <svg class="carousel-control-icon-next" width="19" height="16">
+                  <use href="./img/icons.svg#arrow-next"></use>
+                </svg>
+              </a>
+              <a class="carousel-control-prev" href="#carouselExampleControls12" role="button" data-slide="prev">
+                <svg class="carousel-control-icon-prev" width="19" height="16">
+                  <use href="./img/icons.svg#arrow-prev"></use>
+                </svg>
+              </a>
+            </div> -->
+          </div>
+        </div>
+        <swiper-container class="mySwiper img-swiper" navigation="true" space-between="80"
+        slides-per-view="2" loop="true">
+          <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/cyprus-f057decb.png"></swiper-slide>
+          <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/cyprus-f057decb.png"></swiper-slide>
+          <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/cyprus-f057decb.png"></swiper-slide>
+          <swiper-slide><img class="carousel-item-img" src="/andmax-investments/assets/cyprus-f057decb.png"></swiper-slide>
+        </swiper-container> 
+        <!-- <div id="carouselExampleControls12" class="img-carousel carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="carousel-item-img" src="./img/cyprus.png" alt="First slide" width="438">
+            </div>
+            <div class="carousel-item">
+              <img class="carousel-item-img" src="./img/cyprus.png" alt="Second slide" width="438">
+            </div>
+            <div class="carousel-item">
+              <img class="carousel-item-img" src="./img/cyprus.png" alt="Third slide" width="438">
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="section faq__section">
+      <div class="container faq__section-container">
+        <h2 class="faq__section-title">Часто задаваемые вопросы</h2>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Какие преимущества
+              </button>
+            </h3>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Наша компания готова поселить вас на 3 дня. Покажем все достопримечательности. Подберем для вас варианты коммерческой и жилой недвижимости!</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Какие преимущества
+              </button>
+            </h3>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Наша компания готова поселить вас на 3 дня. Покажем все достопримечательности. Подберем для вас варианты коммерческой и жилой недвижимости!</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Какие преимущества
+              </button>
+            </h3>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Наша компания готова поселить вас на 3 дня. Покажем все достопримечательности. Подберем для вас варианты коммерческой и жилой недвижимости!</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="flush-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                Какие преимущества
+              </button>
+            </h3>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Наша компания готова поселить вас на 3 дня. Покажем все достопримечательности. Подберем для вас варианты коммерческой и жилой недвижимости!</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="flush-headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                Какие преимущества
+              </button>
+            </h3>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Наша компания готова поселить вас на 3 дня. Покажем все достопримечательности. Подберем для вас варианты коммерческой и жилой недвижимости!</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="flush-headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                Какие преимущества
+              </button>
+            </h3>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Наша компания готова поселить вас на 3 дня. Покажем все достопримечательности. Подберем для вас варианты коммерческой и жилой недвижимости!</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="flush-headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                Какие преимущества
+              </button>
+            </h3>
+            <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Наша компания готова поселить вас на 3 дня. Покажем все достопримечательности. Подберем для вас варианты коммерческой и жилой недвижимости!</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="flush-headingEight">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                Какие преимущества
+              </button>
+            </h3>
+            <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Наша компания готова поселить вас на 3 дня. Покажем все достопримечательности. Подберем для вас варианты коммерческой и жилой недвижимости!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-left-side">
+        <h2 class="footer-title">Мы на связи</h2>
+        <div class="footer-address">
+            <strong class="footer-subtitle">Адрес</strong>
+            <address>
+                <svg class="header__contacts-icon" width="28" height="28">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#clock-footer"></use>
+                </svg>
+                <a class="footer-contacts-link footer-address link" href="https://goo.gl/maps/kj35jBKf2ffBkgqM9" target="_blank" rel="noreferrer noopener">Several st. 24a/243</a>
+            </address>
+
+        </div>
+        <div class="footer-contacts">
+            <strong class="footer-subtitle">Клиентськая поддержка:</strong>
+            <address class="footer-contacts-wrap">
+                <svg class="header__contacts-icon" width="28" height="28">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#phone-footer"></use>
+                </svg>
+                <a class="footer-contacts-phone" href="tel:+905488394815">+905488394815</a>
+            </address>
+            <address>
+                <svg class="header__contacts-icon" width="28" height="28">
+                    <use href="/andmax-investments/assets/icons-79cfb5c3.svg#email-footer"></use>
+                </svg>
+                <a class="footer-contacts-email" href="mailto:info@andmax-investments.com">info@andmax-investments.com</a>
+            </address>
+
+          </div>
+      </div>
+      <div class="footer-right-side">
+        <img src="../img/footer.jpg" alt="Map">
+      </div>
+      <hr class="footer-line"> 
+      <div class="footer-privacy-policy flex --just-space">
+        <p>©Andmax Investments 2023. All right reserved.</p><a href="#">Privacy Policy</a>
+      </div>
     </div>
+</footer>
 
-    <div class="thumb">
-      <!-- Path to images as from index.html file -->
-      <img
-        class="pic"
-        src="/vanilla-app-template/assets/vite-logo-51249ca9.png"
-        alt="Vite logo"
-        width="640"
-        height="640"
-      />
-    </div>
-  </div>
-</section>
-
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     
+    <script>
+        ScrollOut({
+            once: true
+            /* options */
+        });
+    </script>
+
   </body>
 </html>
