@@ -1,0 +1,59 @@
+.coast__section {
+    padding: 137px 0 190px 0;
+    background: var(--black);
+    color: var(--white);
+}
+
+.coast__section-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 121.3%; 
+    margin: 0 auto;
+    text-align: center;
+    max-width: 532px;
+}
+
+.coast__section-desc {
+    font-size: 18px;
+    line-height: 156.8%;
+    text-align: center;
+    margin: 43px auto 110px auto;
+    max-width: 637px;
+    color: var(--light-gray-font);
+}
+
+.coast__section-cards {
+    gap: 19px;
+    padding-top: 16px;
+    max-width: 498px;
+}
+
+.coast__section-card {
+    border-radius: 10px;
+    background: var(--white); 
+    padding: 25px 50px 26px 81px;
+    position: relative;
+    color: var(--black);
+}
+
+.coast__section-card-ellipce {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    background: var(--black);
+}
+
+.coast__section-card-desc {
+    font-size: 18px;
+    line-height: 138.3%; 
+}
+
+@media screen and (min-width: 920px) and (max-width: 1200px) {
+    .coast__section-cards {
+        padding-top: 0;
+        max-width: 45%;
+    }
+}

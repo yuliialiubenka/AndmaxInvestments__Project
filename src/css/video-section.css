@@ -1,0 +1,40 @@
+.video__section {
+    position: relative;
+    color: var(--white);
+}
+
+.video__section-container {
+    position: absolute;
+    bottom: 58px;
+    left: 0;
+    right: 0;
+}
+
+.video__section-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 121.3%;
+    max-width: 463px;
+    width: 100%;
+}
+
+.video__section-cards {
+    gap: 40px;
+}
+
+.video__section-card {
+    max-width: 235px;
+}
+
+.video__section-card-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 121.3%; 
+}
+
+.video__section-card-desc {
+    margin-top: 22px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 121.3%; 
+}

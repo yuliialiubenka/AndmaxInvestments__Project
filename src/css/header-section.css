@@ -1,0 +1,131 @@
+.header__section {
+    padding: 211px 0 258px 0;
+    background-image: url(../img/header-section-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -71px;
+    background-position: center;
+    color: var(--white);
+    position: relative;
+}
+
+.header__section-circle-info {
+    width: 225px;
+    height: 225px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    flex-shrink: 0;
+    margin-top: 7px;
+}
+
+.header__section-line {
+    position: absolute;
+    width: 87%;
+    height: 1px;
+    right: 0;
+    background-color: var(--gray-line);
+}
+
+.header__section-circle-info p {
+    max-width: 100px;
+    text-align: center;
+    line-height: 148.3%; 
+}
+
+.header__section-info {
+    position: relative;
+    margin-left: 39px;
+    max-width: 748px;
+    width: 100%;
+}
+
+.header__section-price {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 137.3%; 
+}
+
+.header__section-title {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 137.3%; 
+}
+
+.header__section-desc {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 141.3%; 
+    margin-top: 12px;
+    max-width: 357px; 
+}
+
+.header__section-link {
+    position: absolute;
+    right: 0;
+    top: 92px;
+    font-size: 16px;
+}
+@media screen and (max-width: 1200px) {
+    .header__section-line {
+        width: 100%;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .header__section {
+        padding: 147px 0 178px 0;
+        margin-top: -81px;
+    }
+
+    .container.header__section-container {
+        justify-content: center;
+    }
+
+    .header__section-circle-info {
+        width: 93px;
+        height: 93px;
+        margin-top: 22px;
+    }
+    
+    .header__section-circle-info p {
+        font-size: 10px;
+    }
+    
+    .header__section-info {
+        width: auto;
+    }
+    
+    .header__section-price {
+        font-size: 16px;
+    }
+    
+    .header__section-title {
+        font-size: 32px;
+    }
+    
+    .header__section-desc {
+        margin-top: 18px;
+        max-width: 204px;
+        font-size: 14px;
+        line-height: 133.8%; 
+    }
+    
+    .header__section-link {
+        right: unset;
+        top: unset;
+        bottom: -50px;
+        left: 0;
+        padding: 7px 25px;
+        background: var(--white);
+        color: var(--black);
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 148.3%; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+}

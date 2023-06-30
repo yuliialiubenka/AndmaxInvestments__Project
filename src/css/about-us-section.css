@@ -1,0 +1,50 @@
+.about-us__section {
+    background: var(--black);
+    padding: 135px 0 196px 0;
+    color: var(--white);
+    font-size: 18px;
+    text-align: center;
+}
+
+.about-us__section-title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 112.3%;
+    text-transform: uppercase;
+    margin-bottom: 62px;
+}
+
+.about-us__section-desc {
+    line-height: 152.8%;
+    max-width: 696px;
+    margin: auto;
+}
+
+.about-us__section-desc + p {
+    margin-top: 28px;
+}
+
+.about-us__section-wrapper {
+    gap: 41px 29px;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 94px auto 0 auto;
+}
+
+.about-us__section-card {
+    flex-basis: calc((100% - 29px) / 2);
+    background: var(--white);
+    padding: 28px 33px;
+    color: var(--black);
+    border-radius: 10px;
+}
+
+.about-us__section-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 138.3%; 
+}
+
+.about-us__section-card-desc {
+    line-height: 138.3%;
+}

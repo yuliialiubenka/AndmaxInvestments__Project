@@ -1,0 +1,45 @@
+.faq__section {
+    background: var(--light-background);
+    padding: 0 0 117px 0;
+}
+
+.faq__section .accordion {
+    max-width: 1036px;
+    margin: auto;
+}
+
+.faq__section-title {
+    text-align: center;
+    margin-bottom: 62px;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 112.3%;
+}
+
+.faq__section .accordion-button {
+    background: transparent;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 112.3%;
+    padding: 24px 0;
+}
+
+.faq__section .accordion-button:active, .faq__section .accordion-button:focus {
+
+}
+
+.faq__section .accordion-item {
+    background: transparent;
+    color: var(--black);
+}
+
+.faq__section .accordion-body {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130.3%;
+    padding: 24px 0;
+}
+
+.faq__section .accordion-body:active, .faq__section .accordion-body:focus {
+    color: var(--black);
+}

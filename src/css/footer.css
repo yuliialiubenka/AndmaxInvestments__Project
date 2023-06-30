@@ -1,0 +1,32 @@
+.footer {
+    position: relative;
+    background: var(--light-background);
+}
+
+.footer-title {
+    padding-top: 46px;
+}
+
+.footer-subtitle {
+    display: block;
+    margin-top: 46px;
+    margin-bottom: 25px;
+}
+
+.footer-right-side {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.footer-left-side {
+    padding-bottom: 119px;
+}
+
+.footer-privacy-policy {
+    padding: 18px 0 46px;
+}
+
+.footer-line {
+    margin: 0;
+}

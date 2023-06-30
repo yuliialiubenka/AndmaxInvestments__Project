@@ -5,21 +5,117 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
 @import url('./header.css');
+@import url('./buttons.css');
+@import url('./carousel.css');
+@import url('./header-section.css');
+@import url('./price-section.css');
+@import url('./cyprus-section.css');
+@import url('./advantages-section.css');
+@import url('./restaurant-section.css');
+@import url('./coast-section.css');
+@import url('./spa-salon-section.css');
+@import url('./video-section.css');
+@import url('./locations-section.css');
+@import url('./property-type.css');
+@import url('./form-section.css');
+@import url('./investment-section.css');
+@import url('./about-us-section.css');
+@import url('./our-team-section.css');
+@import url('./reviews-section.css');
+@import url('./steps-section.css');
+@import url('./island-section.css');
+@import url('./faq-section.css');
+@import url('./footer.css');
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  --black: #000000;
+  --white: #ffffff;
+  --gray-font: #8E8E8E;
+  --light-gray-font: #CBCBCB;
+  --gray-background: rgba(59, 67, 80, 0.39);
+  --light-background: #FBFBFB;
+  --light-gray-background: #B3B6BB;
+  --gray-border: #8F8F8F;
+  --gray-line: #B5AFAF;
+  --gray-tab: #CECECE;
+  --yellow: #FADA69;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.flex {
+	display: flex;
+}
+
+.--just-space {
+	justify-content: space-between;
+}
+
+.--just-center {
+	justify-content: center;
+}
+
+.--just-end {
+	justify-content: flex-end;
+}
+
+.--align-str {
+	align-items: stretch;
+}
+
+.--align-center {
+	align-items: center;
+}
+
+.--align-end {
+	align-items: flex-end;
+}
+
+.--dir-col {
+	flex-direction: column;
+}
+
+html {
+	font-size: 16px;
+}
+
+html,
+body {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+	font-size: 16px;
   font-weight: 400;
+  overflow-x: hidden;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1248px;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+@media screen and (max-width: 920px) {
+  .container {
+    padding: 0 32px;
+  }
 }

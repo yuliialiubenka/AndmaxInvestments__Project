@@ -1,0 +1,119 @@
+.property-type__section {
+    padding: 84px 0 112px 0;
+    background: var(--black);
+}
+
+.property-type__section-title {
+    color: var(--white);
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 112.3%;
+    margin-bottom: 78px;
+    text-align: center;
+}
+
+.tabcontent.content--active {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.property-type__section .carousel .slide {
+    width: 100%;
+}
+
+.property-type__section-tabs-wrapper {
+    gap: 41px;
+    margin-bottom: 41px;
+}
+
+.property-type__section-tab {
+    border: none;
+    background: transparent;
+    padding: 19px 6px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 112.3%; 
+    color: var(--gray-tab);
+}
+
+.property-type__section-tab.tab--active {
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+    font-weight: 500;
+}
+
+.property-type__section .carousel-inner {
+    width: 100%;
+}
+
+.property-type__section-card {
+    display: flex;
+    width: 100%;
+    background: var(--white);
+    padding: 66px 63px 73px 63px;
+    border-radius: 10px;
+    gap: 103px;
+}
+
+.property-type__section-img{
+    border-radius: 12px;
+}
+
+.property-type__section-info-title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 112.3%;
+    margin-bottom: 31px;
+}
+
+.property-type__section-desc, .property-type__section-price {
+    font-size: 20px;
+    margin-bottom: 48px;
+    max-width: 431px;
+}
+
+.property-type__section-price span {
+    font-size: 32px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.property-type__section-list-wrapper {
+    display: flex;
+    gap: 48px;
+}
+
+.property-type__section-list li {
+    font-size: 18px;
+    line-height: 112.3%;
+}
+
+.property-type__section-list span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--black);
+    margin-right: 12px;
+}
+
+.property-type__section-list li + li {
+    margin-top: 20px;
+}
+
+.property-type__section-wrap {
+    margin-top: 64px;
+    gap: 26px;
+}
+
+@media screen and (min-width: 920px) and (max-width: 1200px) {
+    .property-type__section-card {
+        padding: 32px;
+        gap: 32px;
+    }
+}

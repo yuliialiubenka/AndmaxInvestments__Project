@@ -1,21 +1,133 @@
 .header {
-  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  line-height: 148.3%;
+  color: var(--white);
 }
 
-.nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
+.header__navigation {
+  gap: 29px;
+  padding-top: 32px;
 }
 
-.nav-link {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
+.header__menu {
+  gap: 35px;
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.header__menu-item-link {
+  font-size: 14px;
+  line-height: 148.3%; 
+}
+
+.header__menu-item-link:hover,
+.header__menu-item-link:focus {
   color: #747bff;
+}
+
+.header__right-block {
+  padding-top: 21px;
+}
+
+.header__contacts {
+  margin-bottom: 0;
+}
+
+.header__contacts-icon {
+  fill: currentColor;
+  margin-top: -4px;
+}
+
+.header__lang {
+  margin: 0 24px 0 70px;
+}
+
+.header__lang-wrapper {
+  background: transparent;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+}
+
+.header__lang-wrapper:focus {
+  outline: none;
+}
+
+.header__lang-wrapper option {
+  color: var(--black);
+}
+
+.header__menu-item.nav-item {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) { 
+  .header__navigation {
+    gap: 10px;
+  }
+  
+  .header__menu {
+    gap: 10px;
+  }
+
+  .header__lang {
+    margin: 0 16px 0 16px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .header__menu-item {
+    display: none;
+  }
+
+  .header__menu-item.nav-item {
+    display: block;
+  }
+
+  .header__menu-item-link.nav-link {
+    color: var(--white);
+    font-size: 14px;
+    line-height: 148.3%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .header__menu-item .dropdown-menu {
+    text-align: left;
+    list-style: none;
+    background: transparent;
+    background-clip: padding-box;
+    border: none;
+  }
+
+  .header__menu-item .dropdown-item {
+    font-size: 14px;
+    color: var(--white);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+
+  }
+
+  .header__menu-item.nav-item {
+    display: none;
+  }
+
+  .header__contacts {
+    display: none;
+  }
+
+  .header__lang {
+    display: none;
+  }
+
+  .header__right-block {
+    padding-top: 43px;
+  }
+
+  .header__navigation {
+    padding-top: 43px;
+  }
 }
