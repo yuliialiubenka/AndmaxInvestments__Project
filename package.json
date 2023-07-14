@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/andmax-investments/",
+    "build": "vite build --base=/AndmaxInvestments__Project/",
     "preview": "vite preview"
   },
   "devDependencies": {
