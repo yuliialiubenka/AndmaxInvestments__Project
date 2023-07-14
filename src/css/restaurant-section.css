@@ -4,6 +4,10 @@
     color: var(--black);
 }
 
+.restaurant__section-wrapper {
+    max-width: fit-content;
+}
+
 .restaurant__section-title {
     font-size: 36px;
     font-weight: 600;
@@ -43,6 +47,16 @@
     background: var(--black);
 }
 
+.restaurant__section .carousel-control-next {
+    background: var(--black);
+    border-color: var(--white);
+}
+
+.restaurant__section .carousel-control-prev {
+    background: transparent;
+    border-color: var(--black);
+}
+
 .restaurant__section-card-title {
     font-size: 20px;
     font-weight: 500;
@@ -58,6 +72,110 @@
 @media screen and (min-width: 920px) and (max-width: 1200px) {
     .restaurant__section-cards {
         padding-top: 0;
-        max-width: 45%;
+    }
+
+    .restaurant__section-wrapper {
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .restaurant__section {
+        padding: 0 0 83px 0;
+    }
+
+    .container.restaurant__section-container {
+        padding: 0;
+    }
+
+    .restaurant__section-wrapper {
+        flex-direction: column;
+        gap: 54px;
+    }
+
+    .restaurant__section-title {
+        font-size: 24px;
+        margin: 0 auto;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 121.3%;
+        padding: 0 32px;
+    }
+
+    .restaurant__section-desc {
+        font-size: 16px;
+        line-height: 156.8%;
+        text-align: center;
+        margin: 24px auto 54px auto;
+        max-width: 637px;
+        padding: 0 32px;
+    }
+
+    .restaurant__section-cards {
+        gap: 9px;
+        margin-bottom: 0;
+        max-width: 100%;
+        padding: 0 32px;
+    }
+
+    .restaurant__section-card {
+        padding: 19px 13px 19px 64px;
+    }
+
+    .restaurant__section-card-ellipce {
+        top: 20px;
+        left: 11px;
+        width: 38px;
+        height: 38px; 
+    }
+
+    .restaurant__section-card-icon {
+        width: 18px;
+        height: 18px; 
+    }
+
+    .restaurant__section-card-desc {
+        font-size: 14px;
+        line-height: 138.3%;
+    }
+
+    .restaurant__section-img {
+        display: none;
+    }
+
+    .restaurant__section-img.mobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 316px;
+        max-height: 345px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    .restaurant__section .carousel-buttons.--just-end {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        order: 3;
+        margin-left: 0;
+        padding: 0 32px;
+    }
+
+    .restaurant__section-wrap {
+        gap: 13px;
+        margin-top: 54px;
+        flex-direction: column;
+    }
+
+    .restaurant__section-card-title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 121.3%; 
+    }
+
+    .restaurant__section-card-desc {
+        font-size: 14px;
+        line-height: 121.3%; 
     }
 }

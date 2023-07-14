@@ -35,6 +35,16 @@
     margin-left: 32px;
 }
 
+.investment__section .carousel-control-next {
+    background: var(--black);
+    border-color: var(--white);
+}
+
+.investment__section .carousel-control-prev {
+    background: transparent;
+    border-color: var(--black);
+}
+
 .investment__section-text {
     border-radius: 10px;
     background: var(--white);
@@ -68,5 +78,63 @@
 
     .investment__section-bottom-wrap {
         margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .investment__section {
+        padding: 83px 0;
+    }
+
+    .investment__section-container {
+        flex-direction: column;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .investment__section-wrapper:first-child {
+        max-width: 100%;
+    }
+
+    .investment__section-wrapper {
+        max-width: 100%;
+    }
+
+    .investment__section-title {
+        font-size: 24px;
+    }
+
+    .investment__section-card-text {
+        font-size: 16px;
+    }
+
+    .investment__section-card-text + p {
+        margin-top: 24px;
+    }
+
+    .investment__section-bottom-wrap {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .investment__section .carousel-buttons.--just-end {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        order: 3;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .investment__section-wrap {
+        flex-direction: column;
+        margin-top: 54px;
+    }
+
+    .investment__section-img {
+        margin: auto;
+    }
+
+    .investment__section-text {
+        width: 100%;
     }
 }

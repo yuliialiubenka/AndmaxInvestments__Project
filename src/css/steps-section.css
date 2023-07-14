@@ -126,3 +126,105 @@
 .steps__section-wrap {
     gap: 26px;
 }
+
+@media screen and (max-width: 1200px) {
+    .steps__section {
+        padding: 0 0 8px;
+    }
+    
+    .steps__section-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .steps__section-desc {
+        max-width: 100%;
+        font-size: 16px;
+        margin-bottom: 54px;
+    }
+    
+    .steps__section-cards {
+        background-image: url(../img/step-line.svg);
+        background-size: contain;
+        background-position-x: left;
+        background-position-y: bottom;
+        min-height: unset;
+        position: relative;
+        flex-direction: column;
+        gap: 31px;
+        margin-bottom: 54px;
+        padding-bottom: 30px;
+    }
+    
+    .steps__section-card {
+        position: static;
+        align-items: center;
+    }
+
+    .steps__section-card-title {
+        font-size: 16px;
+    }
+
+    .steps__section-card-desc {
+        font-size: 14px;
+        margin-top: 12px;
+        max-width: 100%;
+    }
+
+    .steps__section-card:nth-child(1),
+    .steps__section-card:nth-child(2),
+    .steps__section-card:nth-child(3),
+    .steps__section-card:nth-child(4),
+    .steps__section-card:nth-child(5) {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .steps__section-card:nth-child(1) {
+        transform: translateX(12px);
+    }
+
+    .steps__section-card:nth-child(2) {
+        transform: translateX(-4px);
+    }
+
+    .steps__section-card:nth-child(3) {
+        transform: translateX(12px);
+    }
+
+    .steps__section-card:nth-child(4) {
+        transform: translateX(6px);
+    }
+
+    .steps__section-card:nth-child(5) {
+        transform: translateX(18px);
+    }
+
+    .steps__section-card::before {
+        position: static;
+    }
+
+    .steps__section-card:nth-child(1)::before {
+        margin-right: 18px;
+    }
+
+    .steps__section-card:nth-child(2)::before {
+        margin-right: 2px;
+    }
+
+    .steps__section-card:nth-child(3)::before {
+        margin-right: 4px;
+    }
+
+    .steps__section-card:nth-child(4)::before {
+        margin-right: 12px;
+    }
+
+    .steps__section-card:nth-child(5)::before {
+        margin-right: 0;
+    }
+
+    .steps__section-wrap {
+        flex-direction: column;
+    }
+}

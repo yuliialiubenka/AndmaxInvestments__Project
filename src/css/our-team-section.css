@@ -1,6 +1,6 @@
 .our-team__section {
     background: var(--black);
-    padding: 0 0 85px 0;
+    padding: 123px 0 85px 0;
     color: var(--white);
     text-align: center;
 }
@@ -37,4 +37,40 @@
     font-size: 32px;
     font-weight: 500;
     line-height: 112.3%; 
+}
+
+@media screen and (max-width: 768px) {
+    .our-team__section {
+        padding: 64px 0;
+    }
+
+    .our-team__section-cards {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .our-team__section-card {
+        flex-basis: calc((100% - 29px) / 2);
+    }
+
+    .our-team__section-card-name {
+        font-size: 18px;
+        margin-top: 22px;
+    }
+
+    .our-team__section-card-position {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .our-team__section-cards {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 41px;
+    }
+
+    .our-team__section-card {
+        flex-basis: 100%;
+    }
 }

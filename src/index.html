@@ -9,12 +9,94 @@
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
     <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <title>Andmax Investments</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load ="partials/header.html" />
+    
+    <header class="header">
+        <div class="container header-container flex --just-space">
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu" type="button">
+              <svg class="menu-toggle-icon" width="47" height="47">
+                <use href="./img/icons.svg#menu"></use>
+              </svg>
+            </button>
+            <button class="mobile-close-btn menu-toggle js-close-menu" type="button">
+              <svg class="mob-close-icon" width="24" height="24">
+                <use href="./img/icons.svg#close-light"></use>
+              </svg>
+            </button>
+            <nav class="header__navigation flex">
+                <a class="header__logo" href="./index.html">
+                    <img src="./img/logo.svg" alt="Logo">
+                </a>
+                <ul class="header__menu flex">
+                    <li class="header__menu-item"><a class="header__menu-item-link active" href="#cyprus__section">Кипр</a></li>
+                    <li class="header__menu-item"><a class="header__menu-item-link" href="#coast__section">Комплексы</a></li>
+                    <li class="header__menu-item"><a class="header__menu-item-link" href="#propertytype__section">Апартаменты</a></li>
+                    <li class="header__menu-item"><a class="header__menu-item-link" href="#investment__section">Инвесторам</a></li>
+                    <li class="header__menu-item"><a class="header__menu-item-link" href="#aboutus__section">О нас</a></li>
+                    <li class="header__menu-item"><a class="header__menu-item-link" href="#footer">Контакты</a></li>
+                    <li class="header__menu-item nav-item dropdown">
+                        <a class="header__menu-item-link nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Меню
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#why-cyprus__section">Кипр</a></li>
+                          <li><a class="dropdown-item" href="#island__section">Комплексы</a></li>
+                          <li><a class="dropdown-item" href="#property-type__section">Апартаменты</a></li>
+                          <li><a class="dropdown-item" href="#investment__section">Инвесторам</a></li>
+                          <li><a class="dropdown-item" href="#about-us__section">О нас</a></li>
+                          <li class="header__menu-item"><a class="dropdown-item header__menu-item-link" href="#footer">Контакты</a></li>
+                        </ul>
+                      </li>
+                </ul>
+            </nav>
+            <div class="header__right-block flex --align-center">
+                <address class="header__contacts">
+                    <svg class="header__contacts-icon" width="24" height="24">
+                        <use href="./img/icons.svg#phone"></use>
+                    </svg>
+                    <a href="tel:+905488394815">+905488394815</a>
+                </address>
+                <div class="header__lang">
+                    <select class="header__lang-wrapper">
+                        <option value="ru">RU</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+                <a class="header__logo-mobile" href="./index.html">
+                  <img src="./img/logo-mobile.png" alt="Logo">
+                </a>
+                <button class="header__button js-open-modal" data-modal="2" type="button">Получить предложения</button>
+            </div>
+        </div>
+    </header>
+
+    <!--Mobile Menu-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <ul class="mobile-menu list">
+        <li class="mobile-menu-item"><a class="mobile-menu-item-link active" href="#cyprus__section">Кипр</a></li>
+        <li class="mobile-menu-item"><a class="mobile-menu-item-link" href="#coast__section">Комплексы</a></li>
+        <li class="mobile-menu-item"><a class="mobile-menu-item-link" href="#propertytype__section">Апартаменты</a></li>
+        <li class="mobile-menu-item"><a class="mobile-menu-item-link" href="#investment__sectio">Инвесторам</a></li>
+        <li class="mobile-menu-item"><a class="mobile-menu-item-link" href="#aboutus__section">О нас</a></li>
+        <li class="mobile-menu-item"><a class="mobile-menu-item-link" href="#footer">Контакты</a></li>
+      </ul>
+      <div class="header__lang mobile">
+        <select class="header__lang-wrapper">
+            <option value="ru">RU</option>
+            <option value="en">EN</option>
+        </select>
+      </div>
+      <address class="header__contacts mobile">
+        <svg class="header__contacts-icon" width="24" height="24">
+            <use href="./img/icons.svg#phone"></use>
+        </svg>
+        <a href="tel:+905488394815">+905488394815</a>
+      </address>
+    </div>
 
     <section class="section header__section">
       <div class="container header__section-container flex --just-end">
@@ -25,15 +107,20 @@
         <div class="header__section-info">
           <h2 class="header__section-price">от 80 000$</h2>
           <h1 class="header__section-title">Апартаменты</h1>
-          <a class="header__section-link link" href="#">Посмотреть проекти</a>
+          <a class="header__section-link link js-open-modal" data-modal="1" href="#">Посмотреть проекти</a>
           <p class="header__section-desc">У берегов Северного Кипра с доходностью до 30% годовых</p>
         </div>
-        <button class="header__section-btn" type="button">
+        <button class="header__section-btn js-open-modal" data-modal="2" type="button">
           <span>get an offer</span>
           <p>Получить предложения</p>
           <svg class="header__section-btn-icon" width="59" height="8">
             <use href="./img/icons.svg#to-right-arrow"></use>
           </svg>
+          <span class="header__section-btn-icon mobile">
+            <svg class="header__section-btn-icon-svg" width="19" height="16">
+              <use href="./img/icons.svg#arrow-next-white"></use>
+            </svg>
+          </span>
         </button>
       </div>
     </section>
@@ -128,47 +215,85 @@
       </div>
     </section>
 
-    <section class="section why-сyprus__section" >
-      <div class="container why-сyprus__section-container flex --just-space">
-        <div class="why-сyprus__section-wrapper">
-          <h2 class="why-сyprus__section-title">Почему Северный Кипр стал пользоваться</h2>
-          <h3 class="why-сyprus__section-subtitle">спросом у инвесторов</h3>
-          <div class="why-сyprus__section-card">
-            <span class="why-сyprus__section-card-ellipce flex --align-center --just-center">
-              <svg class="why-сyprus__section-card-icon" width="27" height="27">
-                <use href="./img/icons.svg#shapes"></use>
+    <section class="section why-сyprus__section" id="cyprus__section">
+        <div class="container why-сyprus__section-container flex">
+          <div class="why-сyprus__section-wrapper">
+            <h2 class="why-сyprus__section-title">Почему Северный Кипр стал пользоваться</h2>
+            <h3 class="why-сyprus__section-subtitle">спросом у инвесторов</h3>
+            <div thumbsSlider="" class="swiper swiper--why-сyprus">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="why-сyprus__section-card">
+                    <span class="why-сyprus__section-card-ellipce flex --align-center --just-center">
+                      <svg class="why-сyprus__section-card-icon" width="27" height="27">
+                        <use href="./img/icons.svg#shapes"></use>
+                      </svg>
+                    </span>
+                    <p class="why-сyprus__section-card-desc flex">На Кипре более 300 дней в году приходится на солнечные ясные дни. Мягкий средиземноморский климат делает эту страну идеальным местом для жизни.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="why-сyprus__section-card">
+                    <span class="why-сyprus__section-card-ellipce flex --align-center --just-center">
+                      <svg class="why-сyprus__section-card-icon" width="27" height="27">
+                        <use href="./img/icons.svg#shapes"></use>
+                      </svg>
+                    </span>
+                    <p class="why-сyprus__section-card-desc flex">На Кипре более 300 дней в году приходится на солнечные ясные дни. Мягкий средиземноморский климат делает эту страну идеальным местом для жизни.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="why-сyprus__section-card">
+                    <span class="why-сyprus__section-card-ellipce flex --align-center --just-center">
+                      <svg class="why-сyprus__section-card-icon" width="27" height="27">
+                        <use href="./img/icons.svg#shapes"></use>
+                      </svg>
+                    </span>
+                    <p class="why-сyprus__section-card-desc flex">На Кипре более 300 дней в году приходится на солнечные ясные дни. Мягкий средиземноморский климат делает эту страну идеальным местом для жизни.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="why-сyprus__section-card">
+                    <span class="why-сyprus__section-card-ellipce flex --align-center --just-center">
+                      <svg class="why-сyprus__section-card-icon" width="27" height="27">
+                        <use href="./img/icons.svg#shapes"></use>
+                      </svg>
+                    </span>
+                    <p class="why-сyprus__section-card-desc flex">На Кипре более 300 дней в году приходится на солнечные ясные дни. Мягкий средиземноморский климат делает эту страну идеальным местом для жизни.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-buttons flex --dir-col --just-end">
+            <a class="carousel-control-next swiper-button-next" href="#" role="button">
+              <svg class="carousel-control-icon-next" width="19" height="16">
+                <use href="./img/icons.svg#arrow-next"></use>
               </svg>
-            </span>
-            <p class="why-сyprus__section-card-desc flex">На Кипре более 300 дней в году приходится на солнечные ясные дни. Мягкий средиземноморский климат делает эту страну идеальным местом для жизни.</p>
+            </a>
+            <a class="carousel-control-prev swiper-button-prev" href="#" role="button">
+              <svg class="carousel-control-icon-prev" width="19" height="16">
+                <use href="./img/icons.svg#arrow-prev"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="swiper img-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/cyprus.png"></div>
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/cyprus.png"></div>
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/cyprus.png"></div>
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/cyprus.png"></div>
+            </div>
           </div>
         </div>
-        <!-- <div class="carousel-buttons flex --dir-col --just-end">
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <svg class="carousel-control-icon-next" width="19" height="16">
-              <use href="./img/icons.svg#arrow-next"></use>
-            </svg>
-          </a>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-cc73c9b8e1862f7e">
-            <svg class="carousel-control-icon-prev" width="19" height="16">
-              <use href="./img/icons.svg#arrow-prev"></use>
-            </svg>
-          </a>
-        </div> -->
-        <swiper-container class="mySwiper img-swiper" navigation="true" space-between="80"
-        slides-per-view="2" loop="true">
-          <swiper-slide><img class="carousel-item-img" src="./img/cyprus.png"></swiper-slide>
-          <swiper-slide><img class="carousel-item-img" src="./img/cyprus.png"></swiper-slide>
-          <swiper-slide><img class="carousel-item-img" src="./img/cyprus.png"></swiper-slide>
-          <swiper-slide><img class="carousel-item-img" src="./img/cyprus.png"></swiper-slide>
-        </swiper-container> 
-      </div>
     </section>
 
     <section class="section advantages__section">
       <div class="container advantages__section-container flex">
+        <img class="advantages__section-img mobile" src="./img/advantages-section-img.jpg" alt="Hotel">
         <div class="advantages__section-img" style="background-image: url(./img/advantages-section-img.jpg);"></div>
         <div class="advantages__section-wrapper flex --dir-col">
-          <div id="carouselExampleControls2" class="carousel slide" data-ride="false">
+          <div id="carouselExampleControls2" class="carousel slide" data-ride="false" >
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <ul class="advantages__section-cards flex --dir-col">
@@ -281,20 +406,20 @@
             </div>
           </div>
           <div class="carousel-buttons flex --just-end">
-            <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
-              <svg class="carousel-control-icon-next" width="19" height="16">
-                <use href="./img/icons.svg#arrow-next"></use>
-              </svg>
-            </a>
             <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
               <svg class="carousel-control-icon-prev" width="19" height="16">
-                <use href="./img/icons.svg#arrow-prev"></use>
+                <use href="./img/icons.svg#arrow-prev-black"></use>
+              </svg>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+              <svg class="carousel-control-icon-next" width="19" height="16">
+                <use href="./img/icons.svg#arrow-next-white"></use>
               </svg>
             </a>
           </div>
           <div class="advantages__section-wrap flex --align-center">
-            <button class="advantages__section-btn get-offer-btn" type="button">Получить предложения</button>
-            <a class="advantages__section-link link" href="#">Посмотреть проекти</a>
+            <button class="advantages__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+            <a class="advantages__section-link link js-open-modal" data-modal="1" href="#">Посмотреть проекти</a>
           </div>
         </div>
       </div>
@@ -334,43 +459,31 @@
               <p class="restaurant__section-card-desc">Широкий ассортимент мировых способных удивить даже самых изысканных гурманов.</p>
             </li>
           </ul>
-          <!-- <div class="carousel-buttons flex --dir-col --just-end">
-            <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
+          <div class="carousel-buttons flex --dir-col --just-end">
+            <a class="carousel-control-next swiper-button-next" href="#" role="button">
               <svg class="carousel-control-icon-next" width="19" height="16">
-                <use href="./img/icons.svg#arrow-next"></use>
+                <use href="./img/icons.svg#arrow-next-white"></use>
               </svg>
             </a>
-            <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
+            <a class="carousel-control-prev swiper-button-prev" href="#" role="button">
               <svg class="carousel-control-icon-prev" width="19" height="16">
-                <use href="./img/icons.svg#arrow-prev"></use>
+                <use href="./img/icons.svg#arrow-prev-black"></use>
               </svg>
             </a>
           </div>
-          <div id="carouselExampleControls3" class="img-carousel carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="carousel-item-img" src="./img/restaurant.jpg" alt="First slide" width="443">
-              </div>
-              <div class="carousel-item">
-                <img class="carousel-item-img" src="./img/restaurant.jpg" alt="Second slide" width="443">
-              </div>
-              <div class="carousel-item">
-                <img class="carousel-item-img" src="./img/restaurant.jpg" alt="Third slide" width="443">
-              </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/restaurant.jpg"></div>
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/restaurant.jpg"></div>
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/restaurant.jpg"></div>
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/restaurant.jpg"></div>
             </div>
-          </div> -->
-          <swiper-container class="mySwiper img-swiper" navigation="true" space-between="80"
-          slides-per-view="2" loop="true">
-            <swiper-slide><img class="carousel-item-img" src="./img/restaurant.jpg"></swiper-slide>
-            <swiper-slide><img class="carousel-item-img" src="./img/restaurant.jpg"></swiper-slide>
-            <swiper-slide><img class="carousel-item-img" src="./img/restaurant.jpg"></swiper-slide>
-            <swiper-slide><img class="carousel-item-img" src="./img/restaurant.jpg"></swiper-slide>
-          </swiper-container> 
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section coast__section">
+    <section class="section coast__section" id="coast__section">
       <div class="container coast__section-container">
         <h2 class="coast__section-title">Комплексы у берегов Средиземного Моря</h2>
         <p class="coast__section-desc">Наш проект сочетает в себе лучшие условия для комфортного проживания и абсолютно самодостаточную инфраструктуру. На территории комплекса сосредоточено огромное количество живых растений, бассейны, спорт площадки, зоны для отдыха.</p>
@@ -409,37 +522,26 @@
               <p class="coast__section-card-desc">Качественные строительные материалы</p>
             </li>
           </ul>
-          <!-- <div class="carousel-buttons flex --dir-col --just-end">
-            <a class="carousel-control-next" href="#carouselExampleControls4" role="button" data-slide="next">
+          <div class="carousel-buttons flex --dir-col --just-end">
+            <a class="carousel-control-next swiper-button-next" href="#" role="button">
               <svg class="carousel-control-icon-next" width="19" height="16">
                 <use href="./img/icons.svg#arrow-next"></use>
               </svg>
             </a>
-            <a class="carousel-control-prev" href="#carouselExampleControls4" role="button" data-slide="prev">
+            <a class="carousel-control-prev swiper-button-prev" href="#" role="button">
               <svg class="carousel-control-icon-prev" width="19" height="16">
                 <use href="./img/icons.svg#arrow-prev"></use>
               </svg>
             </a>
-          </div> -->
-          <swiper-container class="mySwiper img-swiper" navigation="true" space-between="80" slides-per-view="2" loop="true">
-            <swiper-slide><img class="carousel-item-img" src="./img/restaurant.jpg"></swiper-slide>
-            <swiper-slide><img class="carousel-item-img" src="./img/restaurant.jpg"></swiper-slide>
-            <swiper-slide><img class="carousel-item-img" src="./img/restaurant.jpg"></swiper-slide>
-            <swiper-slide><img class="carousel-item-img" src="./img/restaurant.jpg"></swiper-slide>
-          </swiper-container> 
-          <!-- <div id="carouselExampleControls4" class="img-carousel carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="carousel-item-img" src="./img/restaurant.jpg" alt="First slide" width="438">
-              </div>
-              <div class="carousel-item">
-                <img class="carousel-item-img" src="./img/restaurant.jpg" alt="Second slide" width="438">
-              </div>
-              <div class="carousel-item">
-                <img class="carousel-item-img" src="./img/restaurant.jpg" alt="Third slide" width="438">
-              </div>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/restaurant.jpg"></div>
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/restaurant.jpg"></div>
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/restaurant.jpg"></div>
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/restaurant.jpg"></div>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
@@ -457,7 +559,7 @@
                 </svg>
               </span>
               <h4 class="spa-salon__section-card-title">Масаж</h4>
-              <p class="restaurant__section-card-desc">Все виды массажа: тайский, спортивный, антицеллюлитный, лечебный массаж спины, баночный массаж.</p>
+              <p class="spa-salon__section-card-desc">Все виды массажа: тайский, спортивный, антицеллюлитный, лечебный массаж спины, баночный массаж.</p>
             </li>
             <li class="spa-salon__section-card">
               <span class="spa-salon__section-card-ellipce flex --align-center --just-center">
@@ -478,50 +580,37 @@
               <p class="spa-salon__section-card-desc">Поможет вам очистить ваш организм и омолодить вашу кожу и тело</p>
             </li>
           </ul>
-          <swiper-container class="mySwiper img-swiper" navigation="true" space-between="80"
-          slides-per-view="2" loop="true">
-            <swiper-slide><img class="carousel-item-img" src="./img/cyprus.png"></swiper-slide>
-            <swiper-slide><img class="carousel-item-img" src="./img/cyprus.png"></swiper-slide>
-            <swiper-slide><img class="carousel-item-img" src="./img/cyprus.png"></swiper-slide>
-            <swiper-slide><img class="carousel-item-img" src="./img/cyprus.png"></swiper-slide>
-          </swiper-container> 
-          <!-- <div class="carousel-buttons flex --dir-col --just-end">
-            <a class="carousel-control-next" href="#carouselExampleControls5" role="button" data-slide="next">
+          <div class="carousel-buttons flex --dir-col --just-end">
+            <a class="carousel-control-next swiper-button-next" href="#" role="button">
               <svg class="carousel-control-icon-next" width="19" height="16">
-                <use href="./img/icons.svg#arrow-next"></use>
+                <use href="./img/icons.svg#arrow-next-white"></use>
               </svg>
             </a>
-            <a class="carousel-control-prev" href="#carouselExampleControls5" role="button" data-slide="prev">
+            <a class="carousel-control-prev swiper-button-prev" href="#" role="button">
               <svg class="carousel-control-icon-prev" width="19" height="16">
-                <use href="./img/icons.svg#arrow-prev"></use>
+                <use href="./img/icons.svg#arrow-prev-black"></use>
               </svg>
             </a>
           </div>
-          <div id="carouselExampleControls5" class="img-carousel carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="carousel-item-img" src="./img/cyprus.png" alt="First slide" width="438">
-              </div>
-              <div class="carousel-item">
-                <img class="carousel-item-img" src="./img/cyprus.png" alt="Second slide" width="438">
-              </div>
-              <div class="carousel-item">
-                <img class="carousel-item-img" src="./img/cyprus.png" alt="Third slide" width="438">
-              </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/cyprus.png"></div>
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/cyprus.png"></div>
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/cyprus.png"></div>
+              <div class="swiper-slide"><img class="carousel-item-img" src="./img/cyprus.png"></div>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section video__section">
+      <button class="play-btn"><img src="./img/play.svg" width="178" height="178"></button>
       <video
         poster="./img/video-preload-img.jpg"
         width="100%"
-        autoplay=""
-        loop
+        height="864px"
         preload="auto"
-        controls
       >
         <source src="https://media.istockphoto.com/id/1323709916/cs/video/baz%C3%A9n-shora-odraz-vodn%C3%AD-hladiny-za-slune%C4%8Dn%C3%A9ho-dne-loopable-l%C3%A9to-zpomalen%C3%BD-pohyb-%C5%BE%C3%ADrav%C3%AD.mp4?s=mp4-640x640-is&k=20&c=yZ8-2cQ2N6ap-2Veh5UMm3SzAitmtNi3YKKg6aw7n4A=">
       </video>
@@ -588,10 +677,57 @@
             <p class="locations__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
           </li>
         </ul>
+        <swiper-container class="mySwiper" space-between="40"
+        slides-per-view="2" loop="true" centered-slides="true">
+        <swiper-slide>
+          <div class="locations__section-card">
+            <span class="locations__section-card-ellipce flex --align-center --just-center">
+              <svg class="locations__section-card-icon" width="27" height="27">
+                <use href="./img/icons.svg#shapes"></use>
+              </svg>
+            </span>
+            <h3 class="locations__section-card-title">Цены от 80 000$</h3>
+            <p class="locations__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="locations__section-card">
+            <span class="locations__section-card-ellipce flex --align-center --just-center">
+              <svg class="locations__section-card-icon" width="27" height="27">
+                <use href="./img/icons.svg#shapes"></use>
+              </svg>
+            </span>
+            <h3 class="locations__section-card-title">Первый взнос от 35%</h3>
+            <p class="locations__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="locations__section-card">
+            <span class="locations__section-card-ellipce flex --align-center --just-center">
+              <svg class="locations__section-card-icon" width="27" height="27">
+                <use href="./img/icons.svg#shapes"></use>
+              </svg>
+            </span>
+            <h3 class="locations__section-card-title">Доход от аренды 8-30%</h3>
+            <p class="locations__section-card-desc">Доход за продажу или сдачу в аренду недвижимости на Кипре в среднем составляет 30%</p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="locations__section-card">
+            <span class="locations__section-card-ellipce flex --align-center --just-center">
+              <svg class="locations__section-card-icon" width="27" height="27">
+                <use href="./img/icons.svg#shapes"></use>
+              </svg>
+            </span>
+            <h3 class="locations__section-card-title">Беспроцентная рассрочка 5-7 лет</h3>
+            <p class="locations__section-card-desc">Застройщики предлагают гибкую систему рассрочки: на срок от 3 до 7 лет при первоначальном взносе от 30%</p>
+          </div>
+        </swiper-slide>
+        </swiper-container> 
       </div>
     </section>
 
-    <section class="section property-type__section">
+    <section class="section property-type__section" id="propertytype__section">
       <div class="container property-type__section-container">
         <h2 class="property-type__section-title">Тип недвижимости</h2> 
         <div class="property-type__section-tabs">
@@ -608,7 +744,26 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -630,15 +785,34 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -660,15 +834,34 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -690,8 +883,8 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
@@ -716,7 +909,26 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -738,15 +950,34 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -768,15 +999,34 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -798,8 +1048,8 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
@@ -824,7 +1074,26 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -846,15 +1115,34 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -876,15 +1164,34 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -906,8 +1213,8 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
@@ -932,7 +1239,26 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -954,15 +1280,34 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -984,15 +1329,34 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -1014,8 +1378,8 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
@@ -1040,7 +1404,26 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -1062,15 +1445,34 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -1092,15 +1494,34 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="property-type__section-card">
-                      <img class="property-type__section-img" src="./img/cyprus.png" alt="">
+                      <div class="swiper swiper-img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                          <div class="swiper-slide"><img src="./img/apartment.jpg" width="515px" alt=""></div>
+                        </div>
+                        <div class="swiper-img-buttons-wrap">
+                          <a class="carousel-control-next swiper-button-prev" href="#" role="button">
+                            <svg class="carousel-control-icon-next" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-prev"></use>
+                            </svg>
+                          </a>
+                          <a class="carousel-control-prev swiper-button-next" href="#" role="button">
+                            <svg class="carousel-control-icon-prev" width="19" height="16">
+                              <use href="./img/icons.svg#arrow-next-white"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <div class="property-type__section-info">
                         <h3 class="property-type__section-info-title">Апартаменты 2+1</h3>
                         <p class="property-type__section-desc">Уникальный проект на берегу моря, состоящий из двух вилл с 3 спальнями</p>
@@ -1122,8 +1543,8 @@
                           </li>
                         </ul>
                         <div class="property-type__section-wrap flex --align-center">
-                          <button class="property-type__section-btn get-offer-btn" type="button">Получить предложения</button>
-                          <a class="property-type__section-link link" href="#">Нужна консультация</a>
+                          <button class="property-type__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+                          <a class="property-type__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
                         </div>
                       </div>
                     </div>
@@ -1165,19 +1586,20 @@
           />
           <input
           placeholder="Номер телефона"
-          type="number"
+          type="tel"
           name="user-phone"
           class="form__section-input"
           id="user-phone"
-			    minlength="2"
+			    minlength="12"
           required
+          pattern="[0-9]{12}"
           />
           <button class="form__section-btn" type="submit">Получить</button>
         </form>
       </div>
     </section>
 
-    <section class="section investment__section">
+    <section class="section investment__section" id="investment__section">
       <div class="container investment__section-container flex">
         <div class="investment__section-wrapper">
           <h2 class="investment__section-title">Инвестируйте безопасно с профессионалами</h2>
@@ -1208,15 +1630,15 @@
           </div>         
           <div class="investment__section-bottom-wrap flex --align-center">
             <span class="investment__section-text">участие в PRE-SALE (доход от 15%)</span>
-            <div class="carousel-buttons flex --just-end">
-              <a class="carousel-control-prev" href="#carouselExampleControls11" role="button" data-slide="prev">
-                <svg class="carousel-control-icon-prev" width="19" height="16">
-                  <use href="./img/icons.svg#arrow-prev"></use>
-                </svg>
-              </a>
+            <div class="carousel-buttons flex --dir-col --just-end">
               <a class="carousel-control-next" href="#carouselExampleControls11" role="button" data-slide="next">
                 <svg class="carousel-control-icon-next" width="19" height="16">
-                  <use href="./img/icons.svg#arrow-next"></use>
+                  <use href="./img/icons.svg#arrow-next-white"></use>
+                </svg>
+              </a>
+              <a class="carousel-control-prev" href="#carouselExampleControls11" role="button" data-slide="prev">
+                <svg class="carousel-control-icon-prev" width="19" height="16">
+                  <use href="./img/icons.svg#arrow-prev-black"></use>
                 </svg>
               </a>
             </div>
@@ -1225,14 +1647,14 @@
         <div class="investment__section-wrapper">
           <img class="investment__section-img" src="./img/investment-section-img.jpg" alt="Investment">
           <div class="investment__section-wrap flex --align-center">
-            <button class="investment__section-btn get-offer-btn" type="button">Получить предложения</button>
-            <a class="investment__section-link link" href="#">Нужна консультация</a>
+            <button class="investment__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+            <a class="investment__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section about-us__section">
+    <section class="section about-us__section" id="aboutus__section">
       <div class="container about-us__section-container">
         <h2 class="about-us__section-title">ANDMAX INVESTMENTS</h2>
         <p class="about-us__section-desc">ANDMAX investments основана в 2022 году. Компания ориентирована на инвестирование в недвижимость Северного Кипра. По мимо продажи для клиентов, наша компания предоставляет весь спектр услуг связанных с недвижимостью. До 2022 года наша команда тесно занималась инвестированием в недвижимость в других странах.</p>
@@ -1255,6 +1677,33 @@
             <p class="about-us__section-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet l</p>
           </li>
         </ul>
+        <swiper-container class="mySwiper" space-between="40"
+        slides-per-view="2" loop="true" centered-slides="true">
+        <swiper-slide>
+          <div class="about-us__section-card">
+            <h4 class="about-us__section-card-title">Экспертность</h4>
+            <p class="about-us__section-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet l</p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="about-us__section-card">
+            <h4 class="about-us__section-card-title">Прозрачные условия</h4>
+            <p class="about-us__section-card-desc">Полное сопровождение клиента на острове ( в случае покупки недвижимости, компенсируем билеты на самолет)</p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="about-us__section-card">
+            <h4 class="about-us__section-card-title">Репутация</h4>
+            <p class="about-us__section-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet l</p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="about-us__section-card">
+            <h4 class="about-us__section-card-title">Выгодно</h4>
+            <p class="about-us__section-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet l</p>
+          </div>
+        </swiper-slide>
+        </swiper-container> 
       </div>
     </section>
 
@@ -1328,6 +1777,57 @@
               </p>
             </li>
           </ul>
+          <swiper-container class="mySwiper" space-between="40"
+          slides-per-view="2" loop="true" centered-slides="true">
+          <swiper-slide>
+            <div class="reviews__section-card">
+              <div class="reviews__section-card-info flex --align-center">
+                <img class="reviews__section-card-img" src="./img/client-photo.jpg" alt="Photo">
+                <div class="reviews__section-card-wrap">
+                  <h3 class="reviews__section-card-name">Анастасия</h3>
+                  <div class="reviews__section-card-stars">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+              </div>
+              <p class="reviews__section-card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="reviews__section-card">
+              <div class="reviews__section-card-info flex --align-center">
+                <img class="reviews__section-card-img" src="./img/client-photo.jpg" alt="Photo">
+                <div class="reviews__section-card-wrap">
+                  <h3 class="reviews__section-card-name">Анастасия</h3>
+                  <div class="reviews__section-card-stars">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+              </div>
+              <p class="reviews__section-card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="reviews__section-card">
+              <div class="reviews__section-card-info flex --align-center">
+                <img class="reviews__section-card-img" src="./img/client-photo.jpg" alt="Photo">
+                <div class="reviews__section-card-wrap">
+                  <h3 class="reviews__section-card-name">Анастасия</h3>
+                  <div class="reviews__section-card-stars">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+              </div>
+              <p class="reviews__section-card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              </p>
+            </div>
+          </swiper-slide>
+          </swiper-container> 
       </div>
     </section>
 
@@ -1373,20 +1873,19 @@
           </li>
         </ul>
         <div class="steps__section-wrap flex --align-center --just-center">
-          <button class="steps__section-btn get-offer-btn" type="button">Получить предложения</button>
-          <a class="steps__section-link link" href="#">Нужна консультация</a>
+          <button class="steps__section-btn get-offer-btn js-open-modal" data-modal="2" type="button">Получить предложения</button>
+          <a class="steps__section-link link js-open-modal" data-modal="3" href="#">Нужна консультация</a>
         </div>
       </div>
     </section>
 
     <section class="section island__section">
-      <div class="container island__section-container flex --just-space">
+      <div class="container island__section-container flex">
         <div class="island__section-wrapper">
           <h2 class="island__section-title">Предлагаем вам прилететь на остров!</h2>
           <p class="island__section-desc">Наша компания готова поселить вас на 3 дня. Покажем все достопримечательности. Подберем для вас варианты коммерческой и жилой недвижимости!</p>
           <div class="flex">
             <form action="" class="island__section-form">
-              <strong class="island__section-form-title"></strong>
               <input
               placeholder="Имя"
               type="text"
@@ -1398,49 +1897,62 @@
               />
               <input
               placeholder="Номер телефона"
-              type="number"
+              type="tel"
               name="user-phone"
               class="island__section-input"
               id="user-phone"
-              minlength="2"
+              minlength="12"
               required
+              pattern="[0-9]{12}"
               />
               <button class="island__section-btn" type="submit">Получить</button>
             </form>
-            <!-- <div class="carousel-buttons flex --dir-col --just-end">
-              <a class="carousel-control-next" href="#carouselExampleControls12" role="button" data-slide="next">
-                <svg class="carousel-control-icon-next" width="19" height="16">
-                  <use href="./img/icons.svg#arrow-next"></use>
-                </svg>
-              </a>
-              <a class="carousel-control-prev" href="#carouselExampleControls12" role="button" data-slide="prev">
-                <svg class="carousel-control-icon-prev" width="19" height="16">
-                  <use href="./img/icons.svg#arrow-prev"></use>
-                </svg>
-              </a>
-            </div> -->
           </div>
         </div>
-        <swiper-container class="mySwiper img-swiper" navigation="true" space-between="80"
-        slides-per-view="2" loop="true">
-          <swiper-slide><img class="carousel-item-img" src="./img/cyprus.png"></swiper-slide>
-          <swiper-slide><img class="carousel-item-img" src="./img/cyprus.png"></swiper-slide>
-          <swiper-slide><img class="carousel-item-img" src="./img/cyprus.png"></swiper-slide>
-          <swiper-slide><img class="carousel-item-img" src="./img/cyprus.png"></swiper-slide>
-        </swiper-container> 
-        <!-- <div id="carouselExampleControls12" class="img-carousel carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="carousel-item-img" src="./img/cyprus.png" alt="First slide" width="438">
+        <div class="carousel-buttons flex --dir-col --just-end">
+          <a class="carousel-control-next swiper-button-next" href="#" role="button">
+            <svg class="carousel-control-icon-next" width="19" height="16">
+              <use href="./img/icons.svg#arrow-next-white"></use>
+            </svg>
+          </a>
+          <a class="carousel-control-prev swiper-button-prev" href="#" role="button">
+            <svg class="carousel-control-icon-prev" width="19" height="16">
+              <use href="./img/icons.svg#arrow-prev-black"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="carousel-item-img" src="./img/cyprus.png">
+              <div class="carousel-item-card">
+                <h3 class="carousel-item-card-title">Трансфер</h3>
+                <p class="carousel-item-card-text">Бесплатный трансфер из аэропорта в апартаменты!</p>
+              </div>
             </div>
-            <div class="carousel-item">
-              <img class="carousel-item-img" src="./img/cyprus.png" alt="Second slide" width="438">
+            <div class="swiper-slide">
+              <img class="carousel-item-img" src="./img/cyprus.png">
+              <div class="carousel-item-card">
+                <h3 class="carousel-item-card-title">Трансфер</h3>
+                <p class="carousel-item-card-text">Бесплатный трансфер из аэропорта в апартаменты!</p>
+              </div>
             </div>
-            <div class="carousel-item">
-              <img class="carousel-item-img" src="./img/cyprus.png" alt="Third slide" width="438">
+            <div class="swiper-slide">
+              <img class="carousel-item-img" src="./img/cyprus.png">
+              <div class="carousel-item-card">
+                <h3 class="carousel-item-card-title">Трансфер</h3>
+                <p class="carousel-item-card-text">Бесплатный трансфер из аэропорта в апартаменты!</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img class="carousel-item-img" src="./img/cyprus.png">
+              <div class="carousel-item-card">
+                <h3 class="carousel-item-card-title">Трансфер</h3>
+                <p class="carousel-item-card-text">Бесплатный трансфер из аэропорта в апартаменты!</p>
+              </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </section>
 
@@ -1532,21 +2044,257 @@
       </div>
     </section>
 
-    <load ="partials/footer.html" />
+    <footer class="footer" id="footer">
+      <div class="footer-container container">
+        <div class="footer-left-side">
+          <h2 class="footer-title">Мы на связи</h2>
+          <div class="footer-address">
+              <strong class="footer-subtitle">Адрес</strong>
+              <address>
+                  <svg class="footer__contacts-icon" width="28" height="28">
+                      <use href="./img/icons.svg#clock-footer"></use>
+                  </svg>
+                  <a class="footer-contacts-link footer-address link" href="https://goo.gl/maps/QaTBeJ9DjUieoyyJA" target="_blank" rel="noreferrer noopener">Several st. 24a/243</a>
+              </address>
+  
+          </div>
+          <div class="footer-contacts">
+              <strong class="footer-subtitle">Клиентськая поддержка:</strong>
+              <address class="footer-contacts-wrap">
+                  <svg class="footer__contacts-icon" width="28" height="28">
+                      <use href="./img/icons.svg#phone-footer"></use>
+                  </svg>
+                  <a class="footer-contacts-phone" href="tel:+905488394815">+905488394815</a>
+              </address>
+              <address>
+                  <svg class="footer__contacts-icon" width="28" height="28">
+                      <use href="./img/icons.svg#email-footer"></use>
+                  </svg>
+                  <a class="footer-contacts-email" href="mailto:info@andmax-investments.com">info@andmax-investments.com</a>
+              </address>
+  
+            </div>
+        </div>
+        <div class="footer-right-side">
+          <div class="map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.648960458748!2d30.489825!3d50.447638999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce8ba2e75889%3A0x7924cfab18cfbaf4!2z0L_RgNC-0YHQv9C10LrRgiDQn9C10YDQtdC80L7Qs9C4LCAyLCDQmtC40ZfQsiwg0KPQutGA0LDRl9C90LAsIDAyMDAw!5e0!3m2!1suk!2scz!4v1688383365910!5m2!1suk!2scz" width="882" height="402" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <!-- <img src="../img/footer.jpg" alt="Map"> -->
+        </div>
+        <hr class="footer-line"> 
+        <div class="footer-privacy-policy flex --just-space">
+          <p>©Andmax Investments 2023. All right reserved.</p><a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+
+    <div class="modal get-catalog__modal" data-modal="1">
+      <button class="js-modal-close bnt-modal-close" type="button">
+        <svg class="close-icon" width="24" height="24">
+          <path d="M18 6 6 18M6 6l12 12" stroke="#CECECE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <form class="modal__contact-form">
+        <strong class="modal__contact-form-title">Получить каталог</strong>
+        <input
+          placeholder="Имя"
+          type="text"
+          name="user-name"
+          class="modal__contact-form-input"
+          id="user-name"
+          minlength="2"
+          required
+          />
+        <input
+          placeholder="Номер телефона"
+          type="tel"
+          name="user-phone"
+          class="modal__contact-form-input"
+          id="user-phone"
+          minlength="12"
+          required
+          pattern="[0-9]{12}"
+        />
+				<label class="modal__contact-form-label" for="privacy-policy">
+					<input type="checkbox" name="privacy-policy" class="modal__contact-form-checkbox" id="privacy-policy" required>
+					<span>
+						<svg class="modal__contact-form-icon checkbox" width="10" height="8">
+							<use href="./img/icons.svg#checked"></use>
+						</svg>
+						Я соглашаюсь с <a class="modal__contact-form-link" href="#">политикой конфиденциальности</a>
+					</span>
+				</label>
+				<button class="modal__contact-form-btn" type="submit">Отправить</button>
+			</form>
+    </div>
+
+    <div class="modal get-offers__modal" data-modal="2">
+      <button class="js-modal-close bnt-modal-close" type="button">
+        <svg class="close-icon" width="24" height="24">
+          <path d="M18 6 6 18M6 6l12 12" stroke="#CECECE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <form class="modal__contact-form">
+        <strong class="modal__contact-form-title">Получить предложения</strong>
+        <input
+          placeholder="Имя"
+          type="text"
+          name="user-name"
+          class="modal__contact-form-input"
+          id="user-name"
+          minlength="2"
+          required
+          />
+        <input
+          placeholder="Номер телефона"
+          type="tel"
+          name="user-phone"
+          class="modal__contact-form-input"
+          id="user-phone"
+          minlength="12"
+          required
+          pattern="[0-9]{12}"
+        />
+				<label class="modal__contact-form-label" for="privacy-policy">
+					<input type="checkbox" name="privacy-policy" class="modal__contact-form-checkbox" id="privacy-policy" required>
+					<span>
+						<svg class="modal__contact-form-icon checkbox" width="10" height="8">
+							<use href="./img/icons.svg#checked"></use>
+						</svg>
+						Я соглашаюсь с <a class="modal__contact-form-link" href="#">политикой конфиденциальности</a>
+					</span>
+				</label>
+				<button class="modal__contact-form-btn" type="submit">Отправить</button>
+			</form>
+    </div>
+
+    <div class="modal get-consultation__modal" data-modal="3">
+      <button class="js-modal-close bnt-modal-close" type="button">
+        <svg class="close-icon" width="24" height="24">
+          <path d="M18 6 6 18M6 6l12 12" stroke="#CECECE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <form class="modal__contact-form">
+        <strong class="modal__contact-form-title">Получить консультацию</strong>
+        <input
+          placeholder="Имя"
+          type="text"
+          name="user-name"
+          class="modal__contact-form-input"
+          id="user-name"
+          minlength="2"
+          required
+          />
+        <input
+          placeholder="Номер телефона"
+          type="tel"
+          name="user-phone"
+          class="modal__contact-form-input"
+          id="user-phone"
+          minlength="12"
+          required
+          pattern="[0-9]{12}"
+        />
+				<label class="modal__contact-form-label" for="privacy-policy">
+					<input type="checkbox" name="privacy-policy" class="modal__contact-form-checkbox" id="privacy-policy" required>
+					<span>
+						<svg class="modal__contact-form-icon checkbox" width="10" height="8">
+							<use href="./img/icons.svg#checked"></use>
+						</svg>
+						Я соглашаюсь с <a class="modal__contact-form-link" href="#">политикой конфиденциальности</a>
+					</span>
+				</label>
+				<button class="modal__contact-form-btn" type="submit">Отправить</button>
+			</form>
+    </div>
+
+    <div class="overlay js-overlay-modal"></div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script type="module" src="/main.js"></script>
-    <script>
-        ScrollOut({
-            once: true
-            /* options */
-        });
-    </script>
 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,       
+        centeredSlides: false,       
+        slidesPerView: 2,       
+        spaceBetween: 20,
+        speed: 1000,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        
+        breakpoints: {
+          320: {
+            spaceBetween: 50
+          },
+          600: {
+            spaceBetween: 80
+          },
+          768: {
+            spaceBetween: 100
+          },
+          920: {
+            spaceBetween: 80
+          },
+          // when window width is >= 1200px
+          1200: {
+            spaceBetween: 90
+          }
+        }
+        
+      });
+    </script>
+    <script>
+          const swiperImg = new Swiper('.swiper-img', {
+            direction: 'horizontal',
+            loop: false,       
+            centeredSlides: true,       
+            slidesPerView: 1,       
+            spaceBetween: 0,
+            speed: 1000,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            
+          });
+    </script>
+    <script>
+      var imgSwiper = new Swiper('.img-swiper', {
+        spaceBetween: 80,
+        slidesPerView: 2,
+        loop: true,
+        navigation: {
+          nextEl: ".why-сyprus__section .carousel-buttons .carousel-control-next",
+          prevEl: ".why-сyprus__section .carousel-buttons .carousel-control-prev",
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        speed: 800,
+        thumbs: {
+          swiper: {
+            el: ".swiper--why-сyprus",
+            slidesPerView: 1,
+            spaceBetween: 0,
+            watchSlidesProgress: true,
+            loop: true,
+            allowTouchMove: false,
+          }
+        },
+      });
+    </script>
   </body>
 </html>

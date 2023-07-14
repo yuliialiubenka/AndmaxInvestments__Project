@@ -2,6 +2,14 @@ button {
     cursor: pointer;
 }
 
+button:hover, button:focus {
+    color: #5eb6d8;
+}
+
+a:hover, a:focus {
+    color: #5eb6d8;
+}
+
 .header__button {
     padding: 10px 20px; 
     border: 1px solid var(--white);
@@ -84,20 +92,54 @@ button {
     width: 100%;
 }
 
+.modal__contact-form-btn {
+    border-radius: 10px;
+    background: var(--black);
+    color: var(--white);
+    padding: 14px 95px 11px 95px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 148.3%; 
+    border: none;
+    margin-top: 19px;
+    text-align: center;
+    width: 100%;
+}
+
 @media screen and (max-width: 920px) {
     .header__section-btn {
         height: 102px;
         padding: 27px 35px 33px 31px;
         width: 359px;
     }
+
+    .property-type__section .get-offer-btn {
+        font-size: 10px;
+        font-weight: 600;
+        padding: 8px 16px;
+    }
+
+    .property-type__section .link {
+        font-size: 10px;
+    }
+
+    .link {
+        font-size: 14px;
+    }
+    
+    .get-offer-btn {
+        font-size: 14px;
+        padding: 15px 24px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
     .header__button {
-        padding: 10px 20px; 
-        border: 1px solid var(--white);
-        color: var(--white);
-        background: transparent;
+        padding: 9px 6px; 
+        font-size: 8px;
+        line-height: 148.3%;
+        margin-left: 29px;
     }
     
     .header__section-btn {
@@ -107,36 +149,33 @@ button {
     }
     
     .header__section-btn-icon {
-        position: absolute;
-        top: 40px;
-        right: 40px;
+        display: none;
     }
-    
+
+    .header__section-btn-icon.mobile {
+        border-radius: 50%;
+        background: var(--black);
+        display: flex;
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        top: 25px;
+        right: 35px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__section-btn-icon-svg {
+        fill: var(--white);
+    }
+
     .header__section-btn span {
     }
     
     .header__section-btn p {
 
     }
-    
-    .link {
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 148.3%;
-        text-decoration-line: underline; 
-    }
-    
-    .get-offer-btn {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 148.3%;
-        border-radius: 10px;
-        background: var(--black);
-        color: var(--white);
-        padding: 18px 35px;
-        border: none;
-    }
-    
+        
     .form__section-btn {
         border-radius: 10px;
         background: var(--white);
@@ -149,16 +188,20 @@ button {
     }
     
     .island__section-btn {
-        border-radius: 10px;
-        background: var(--black);
-        color: var(--white);
-        padding: 10px 95px 11px 95px;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 148.3%; 
-        border: none;
-        margin-top: 28px;
-        text-align: center;
+        padding: 14px 83px 14px 83px;
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 16px;
         width: 100%;
     }
+
+    .modal__contact-form-btn {
+        padding: 14px 83px 14px 83px;
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 16px;
+        width: 100%;
+    }
+
+
 }

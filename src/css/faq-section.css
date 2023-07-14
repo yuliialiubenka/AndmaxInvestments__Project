@@ -6,6 +6,7 @@
 .faq__section .accordion {
     max-width: 1036px;
     margin: auto;
+    border-bottom: 1px solid #CECECE; 
 }
 
 .faq__section-title {
@@ -25,7 +26,22 @@
 }
 
 .faq__section .accordion-button:active, .faq__section .accordion-button:focus {
+    box-shadow: none;
+}
 
+.faq__section .accordion-button:not(.collapsed) {
+    color: var(--black);
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid #CECECE; 
+}
+
+.accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
 }
 
 .faq__section .accordion-item {
@@ -38,8 +54,24 @@
     font-weight: 400;
     line-height: 130.3%;
     padding: 24px 0;
+    color: rgba(0, 0, 0, 0.72); 
 }
 
 .faq__section .accordion-body:active, .faq__section .accordion-body:focus {
     color: var(--black);
+}
+
+@media screen and (max-width: 920px) {
+    .faq__section-title {
+        margin-bottom: 54px;
+        font-size: 24px;
+    }
+
+    .faq__section .accordion-button {
+        font-size: 16px;
+    }
+
+    .faq__section .accordion-body {
+        font-size: 14px;
+    }
 }

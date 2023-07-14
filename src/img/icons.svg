@@ -25,13 +25,21 @@
         <path d="M12.375 8.375h.844a5.406 5.406 0 0 1 5.406 5.406v5.344A5.127 5.127 0 0 1 13.5 24.25H7.875a5.127 5.127 0 0 1-5.125-5.125V13.5a5.127 5.127 0 0 1 5.125-5.125h4.5Z" stroke="#fff"/>
         <path d="M12.982 7.375a5.684 5.684 0 1 1 6.643 6.643v-.237a6.405 6.405 0 0 0-6.406-6.406h-.236Z" stroke="#fff"/>
     </symbol>
-    <!-- Arrow next -->
+    <!-- Arrow next black-->
     <symbol id="arrow-next" viewBox="0 0 19 16" fill="none">
         <path d="M18.707 8.707a1 1 0 0 0 0-1.414L12.343.929a1 1 0 1 0-1.414 1.414L16.586 8l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364ZM0 9h18V7H0v2Z" fill="#000"/>
     </symbol>
     <!-- Arrow prev -->
     <symbol id="arrow-prev" viewBox="0 0 19 16" fill="none">
         <path d="M.293 7.293a1 1 0 0 0 0 1.414l6.364 6.364a1 1 0 0 0 1.414-1.414L2.414 8l5.657-5.657A1 1 0 0 0 6.657.93L.293 7.293ZM19 7H1v2h18V7Z" fill="#fff"/>
+    </symbol>
+    <!-- Arrow next white -->
+    <symbol id="arrow-next-white" viewBox="0 0 19 16" fill="none">
+        <path d="M18.707 8.707a1 1 0 0 0 0-1.414L12.343.929a1 1 0 1 0-1.414 1.414L16.586 8l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364ZM0 9h18V7H0v2Z" fill="#fff"/>
+    </symbol>
+    <!-- Arrow prev black-->
+    <symbol id="arrow-prev-black" viewBox="0 0 19 16" fill="none">
+        <path d="M.293 7.293a1 1 0 0 0 0 1.414l6.364 6.364a1 1 0 0 0 1.414-1.414L2.414 8l5.657-5.657A1 1 0 0 0 6.657.93L.293 7.293ZM19 7H1v2h18V7Z" fill="#000"/>
     </symbol>
     <!-- Home black -->
     <symbol id="home" viewBox="0 0 25 25" fill="none">
@@ -62,6 +70,22 @@
             <path d="M21.036 11.636c0 5.94-7.636 11.03-7.636 11.03s-7.636-5.09-7.636-11.03a7.636 7.636 0 1 1 15.272 0Z" fill="#010E16"/>
             <path d="M13.4 14.182a2.545 2.545 0 1 0 0-5.091 2.545 2.545 0 0 0 0 5.09Z" fill="#fff"/>
         </g>
+    </symbol>
+    <!-- Menu -->
+    <symbol id="menu" viewBox="0 0 47 47" fill="none">
+        <path d="M13.219 15.177H33.78M13.219 23.5h12.729m-12.729 8.323H33.78" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Close-dark -->
+    <symbol id="close-dark" viewBox="0 0 24 24">
+        <path d="M18 6 6 18M6 6l12 12" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Close-light -->
+    <symbol id="close-light" viewBox="0 0 24 24">
+        <path d="M18 6 6 18M6 6l12 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Cheked icon -->
+    <symbol id="checked" viewBox="0 0 10 8">
+        <path d="M8.446.255A.917.917 0 0 1 10 .901a.928.928 0 0 1-.242.649L4.864 7.704a.92.92 0 0 1-1.019.229.92.92 0 0 1-.306-.204L.293 4.466a.925.925 0 0 1-.226-1.024.925.925 0 0 1 .87-.578.916.916 0 0 1 .656.294L4.162 5.74 8.422.282a.329.329 0 0 1 .025-.027h-.001Z"/>
     </symbol>
   </defs>
 </svg>
